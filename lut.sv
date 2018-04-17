@@ -47,7 +47,7 @@ assign out_fixed = out[15]?(~out[14:0])+1:out[14:0];
 assign sin = {{15{out[15]}},out_fixed,2'b00};
 
 
-always_ff @ (negedge clk) begin
+always_ff @ (negedge Clk) begin
 case (in)
 9'd0: out <= 16'b0;    
 9'd1: out <= 16'b100011110;    9'd2: out <= 16'b1000111100;    9'd3: out <= 16'b1101011001;    
@@ -194,7 +194,7 @@ assign in = angle_fixed[24:16];
 assign out_fixed = out[15]?(~out[14:0])+1:out[14:0];
 assign cos = {{15{out[15]}},out_fixed,2'b00};
 
-always_ff @ (negedge clk) begin
+always_ff @ (negedge Clk) begin
 case (in)
 9'd0: out <= 16'b100000000000000;    
 9'd1: out <= 16'b11111111111110;    9'd2: out <= 16'b11111111110110;    9'd3: out <= 16'b11111111101010;    
@@ -325,19 +325,21 @@ endmodule
 module ray_lut(
 	input logic Clk,
 	input fixed_real theta, phi,
-	input vector ray
+	output vector ray
 );
 
-fixed_real cosTheta, sinTheta, sinPhi, cosPhi;
+fixed_real cosTheta, sinTheta, sinPhi, cosPhi,x,y,z;
 
 sin_lut s0(.*,.angle(theta),.sin(sinTheta));
 sin_lut s1(.*,.angle(phi),.sin(sinPhi));
-cos_lut c0(.*,.angle(theta),.sin(cosTheta));
-sin_lut c1(.*,.angle(phi),.sin(cosTheta));
+cos_lut c0(.*,.angle(theta),.cos(cosTheta));
+cos_lut c1(.*,.angle(phi),.cos(cosTheta));
 
-mult_real m0(.a(sinTheta),.b(sinPhi),.c(ray[1]));
-mult_real m1(.a(sinTheta),.b(cosPhi),.c(ray[2]));
+mult_real m0(.a(sinTheta),.b(sinPhi),.c(y));
+mult_real m1(.a(sinTheta),.b(cosPhi),.c(z));
 
-assign ray[0] = cosTheta;
+assign x = cosTheta;
+
+assign ray = {x,y,z};
 
 endmodule

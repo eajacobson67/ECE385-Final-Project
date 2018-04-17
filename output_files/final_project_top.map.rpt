@@ -1,5 +1,5 @@
 Analysis & Synthesis report for final_project_top
-Tue Apr 17 15:01:34 2018
+Tue Apr 17 15:24:09 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -10,26 +10,18 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Parameter Settings for User Entity Instance: VGA_controller:vga
- 12. Parameter Settings for User Entity Instance: increment_write:comb_4
- 13. Port Connectivity Checks: "ray_lut:rl"
- 14. Port Connectivity Checks: "increment_write:comb_4"
- 15. Port Connectivity Checks: "frame_buffer:fb"
- 16. Port Connectivity Checks: "VGA_controller:vga"
- 17. Port Connectivity Checks: "collision_detection:cd|dot_product_scale:cc"
- 18. Port Connectivity Checks: "collision_detection:cd|dot_product_scale:vdxc"
- 19. Port Connectivity Checks: "collision_detection:cd"
- 20. Port Connectivity Checks: "sphere_reg:firstsph"
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
- 24. Analysis & Synthesis Suppressed Messages
+  5. Parameter Settings for User Entity Instance: VGA_controller:vga
+  6. Parameter Settings for User Entity Instance: increment_write:comb_4
+  7. Port Connectivity Checks: "ray_lut:rl"
+  8. Port Connectivity Checks: "increment_write:comb_4"
+  9. Port Connectivity Checks: "frame_buffer:fb"
+ 10. Port Connectivity Checks: "VGA_controller:vga"
+ 11. Port Connectivity Checks: "collision_detection:cd|dot_product_scale:cc"
+ 12. Port Connectivity Checks: "collision_detection:cd|dot_product_scale:vdxc"
+ 13. Port Connectivity Checks: "collision_detection:cd"
+ 14. Port Connectivity Checks: "sphere_reg:firstsph"
+ 15. Analysis & Synthesis Messages
+ 16. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -56,20 +48,20 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 17 15:01:34 2018      ;
+; Analysis & Synthesis Status        ; Failed - Tue Apr 17 15:24:09 2018          ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                      ; final_project_top                          ;
 ; Top-level Entity Name              ; final_top_level                            ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 0                                          ;
-;     Total combinational functions  ; 0                                          ;
-;     Dedicated logic registers      ; 0                                          ;
-; Total registers                    ; 0                                          ;
-; Total pins                         ; 34                                         ;
-; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0                                          ;
-; Embedded Multiplier 9-bit elements ; 0                                          ;
-; Total PLLs                         ; 0                                          ;
+; Total logic elements               ; N/A until Partition Merge                  ;
+;     Total combinational functions  ; N/A until Partition Merge                  ;
+;     Dedicated logic registers      ; N/A until Partition Merge                  ;
+; Total registers                    ; N/A until Partition Merge                  ;
+; Total pins                         ; N/A until Partition Merge                  ;
+; Total virtual pins                 ; N/A until Partition Merge                  ;
+; Total memory bits                  ; N/A until Partition Merge                  ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
+; Total PLLs                         ; N/A until Partition Merge                  ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -169,229 +161,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Number detected on machine ; 8      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                        ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                    ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------+---------+
-; lut.sv                           ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/lut.sv                 ;         ;
-; ang_lut.sv                       ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/ang_lut.sv             ;         ;
-; VGA_controller.sv                ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/VGA_controller.sv      ;         ;
-; final_top_level.sv               ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/final_top_level.sv     ;         ;
-; vector.sv                        ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/vector.sv              ;         ;
-; frame_buffer.sv                  ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/frame_buffer.sv        ;         ;
-; collision_detection.sv           ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/collision_detection.sv ;         ;
-; sphere_reg.sv                    ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/sphere_reg.sv          ;         ;
-; WriteUpdate.sv                   ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/WriteUpdate.sv         ;         ;
-; color_mapper.sv                  ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/color_mapper.sv        ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------+---------+
-
-
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-;                                             ;          ;
-; Total combinational functions               ; 0        ;
-; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 0        ;
-;     -- 3 input functions                    ; 0        ;
-;     -- <=2 input functions                  ; 0        ;
-;                                             ;          ;
-; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 0        ;
-;     -- arithmetic mode                      ; 0        ;
-;                                             ;          ;
-; Total registers                             ; 0        ;
-;     -- Dedicated logic registers            ; 0        ;
-;     -- I/O registers                        ; 0        ;
-;                                             ;          ;
-; I/O pins                                    ; 34       ;
-;                                             ;          ;
-; Embedded Multiplier 9-bit elements          ; 0        ;
-;                                             ;          ;
-; Maximum fan-out node                        ; CLOCK_50 ;
-; Maximum fan-out                             ; 1        ;
-; Total fan-out                               ; 34       ;
-; Average fan-out                             ; 0.50     ;
-+---------------------------------------------+----------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |final_top_level           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |final_top_level    ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+----------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                               ;
-+-----------------------------------------+----------------------------------------+
-; Register name                           ; Reason for Removal                     ;
-+-----------------------------------------+----------------------------------------+
-; y_ang_lut:yang|out[6..15]               ; Stuck at GND due to stuck port data_in ;
-; increment_write:comb_4|v_counter[0..9]  ; Stuck at GND due to stuck port clock   ;
-; increment_write:comb_4|h_counter[0..9]  ; Stuck at GND due to stuck port clock   ;
-; sphere_reg:firstsph|currentcol[0][0]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[0][1]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[0][2]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[0][3]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[0][4]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[0][5]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[0][6]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[0][7]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[1][0]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[1][1]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[1][2]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[1][3]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[1][4]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[1][5]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[1][6]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[1][7]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[2][0]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[2][1]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[2][2]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[2][3]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[2][4]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[2][5]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[2][6]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[2][7]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][31]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][30]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][29]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][28]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][27]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][26]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][25]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][24]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][23]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][22]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][21]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][20]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][19]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][18]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][17]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][16]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][15]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][14]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][13]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][12]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][11]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][10]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][9]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][8]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][7]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][6]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][5]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][4]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][3]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][2]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][1]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][0]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][31]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][30]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][29]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][28]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][27]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][26]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][25]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][24]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][23]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][22]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][21]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][20]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][19]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][18]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][17]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][16]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][15]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][14]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][13]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][12]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][11]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][10]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][9]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][8]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][7]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][6]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][5]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][4]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][3]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][2]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][1]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][0]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][31]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][30]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][29]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][28]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][27]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][26]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][25]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][24]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][23]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][22]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][21]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][20]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][19]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][18]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][17]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][16]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][15]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][14]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][13]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][12]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][11]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][10]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][9]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][8]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][7]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][6]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][5]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][4]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][3]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][2]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][1]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][0]    ; Lost fanout                            ;
-; VGA_controller:vga|v_counter[0..9]      ; Stuck at GND due to stuck port clock   ;
-; VGA_controller:vga|h_counter[0..9]      ; Stuck at GND due to stuck port clock   ;
-; VGA_controller:vga|VGA_BLANK_N          ; Stuck at GND due to stuck port clock   ;
-; VGA_controller:vga|VGA_VS               ; Stuck at GND due to stuck port clock   ;
-; VGA_controller:vga|VGA_HS               ; Stuck at GND due to stuck port clock   ;
-; ray_lut:rl|out[0..47]                   ; Lost fanout                            ;
-; y_ang_lut:yang|out[0..5]                ; Lost fanout                            ;
-; Total Number of Removed Registers = 227 ;                                        ;
-+-----------------------------------------+----------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                             ;
-+-----------------------+---------------------------+---------------------------------------------------------------------+
-; Register name         ; Reason for Removal        ; Registers Removed due to This Register                              ;
-+-----------------------+---------------------------+---------------------------------------------------------------------+
-; y_ang_lut:yang|out[7] ; Stuck at GND              ; y_ang_lut:yang|out[4], y_ang_lut:yang|out[3], y_ang_lut:yang|out[1] ;
-;                       ; due to stuck port data_in ;                                                                     ;
-+-----------------------+---------------------------+---------------------------------------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
 
 
 +-----------------------------------------------------------------+
@@ -498,41 +267,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------+-------+----------+--------------+
 
 
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 34                          ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
-;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Tue Apr 17 14:44:54 2018
+    Info: Processing started: Tue Apr 17 15:23:54 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final_project -c final_project_top
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 1 design units, including 1 entities, in source file lut.sv
-    Info (12023): Found entity 1: ray_lut
+Info (12021): Found 3 design units, including 3 entities, in source file lut.sv
+    Info (12023): Found entity 1: sin_lut
+    Info (12023): Found entity 2: cos_lut
+    Info (12023): Found entity 3: ray_lut
 Info (12021): Found 2 design units, including 2 entities, in source file ang_lut.sv
     Info (12023): Found entity 1: y_ang_lut
     Info (12023): Found entity 2: x_ang_lut
@@ -562,8 +309,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file writeup
     Info (12023): Found entity 1: increment_write
 Info (12021): Found 1 design units, including 1 entities, in source file color_mapper.sv
     Info (12023): Found entity 1: color_mapper
-Warning (10236): Verilog HDL Implicit Net warning at lut.sv(47): created implicit net for "rayx_fix"
-Warning (10236): Verilog HDL Implicit Net warning at lut.sv(48): created implicit net for "rayy_fix"
 Warning (10236): Verilog HDL Implicit Net warning at ang_lut.sv(133): created implicit net for "dPhi"
 Warning (10236): Verilog HDL Implicit Net warning at frame_buffer.sv(14): created implicit net for "Write_Index"
 Warning (10236): Verilog HDL Implicit Net warning at frame_buffer.sv(15): created implicit net for "Read_Index"
@@ -591,61 +336,113 @@ Warning (10230): Verilog HDL assignment warning at ang_lut.sv(13): truncated val
 Info (12128): Elaborating entity "x_ang_lut" for hierarchy "x_ang_lut:xang"
 Warning (10036): Verilog HDL or VHDL warning at ang_lut.sv(133): object "dPhi" assigned a value but never read
 Warning (10230): Verilog HDL assignment warning at ang_lut.sv(133): truncated value with size 32 to match size of target (1)
-Warning (12158): Entity "x_ang_lut" contains only dangling pins
 Info (12128): Elaborating entity "ray_lut" for hierarchy "ray_lut:rl"
-Warning (10230): Verilog HDL assignment warning at lut.sv(43): truncated value with size 49 to match size of target (32)
-Warning (10230): Verilog HDL assignment warning at lut.sv(44): truncated value with size 49 to match size of target (32)
-Warning (10230): Verilog HDL assignment warning at lut.sv(45): truncated value with size 49 to match size of target (32)
-Warning (10230): Verilog HDL assignment warning at lut.sv(47): truncated value with size 32 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at lut.sv(48): truncated value with size 32 to match size of target (1)
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "VGA_R[0]" is stuck at GND
-    Warning (13410): Pin "VGA_R[1]" is stuck at GND
-    Warning (13410): Pin "VGA_R[2]" is stuck at GND
-    Warning (13410): Pin "VGA_R[3]" is stuck at GND
-    Warning (13410): Pin "VGA_R[4]" is stuck at GND
-    Warning (13410): Pin "VGA_R[5]" is stuck at GND
-    Warning (13410): Pin "VGA_R[6]" is stuck at GND
-    Warning (13410): Pin "VGA_R[7]" is stuck at GND
-    Warning (13410): Pin "VGA_G[0]" is stuck at GND
-    Warning (13410): Pin "VGA_G[1]" is stuck at GND
-    Warning (13410): Pin "VGA_G[2]" is stuck at GND
-    Warning (13410): Pin "VGA_G[3]" is stuck at GND
-    Warning (13410): Pin "VGA_G[4]" is stuck at GND
-    Warning (13410): Pin "VGA_G[5]" is stuck at GND
-    Warning (13410): Pin "VGA_G[6]" is stuck at GND
-    Warning (13410): Pin "VGA_G[7]" is stuck at GND
-    Warning (13410): Pin "VGA_B[0]" is stuck at GND
-    Warning (13410): Pin "VGA_B[1]" is stuck at GND
-    Warning (13410): Pin "VGA_B[2]" is stuck at GND
-    Warning (13410): Pin "VGA_B[3]" is stuck at GND
-    Warning (13410): Pin "VGA_B[4]" is stuck at GND
-    Warning (13410): Pin "VGA_B[5]" is stuck at GND
-    Warning (13410): Pin "VGA_B[6]" is stuck at GND
-    Warning (13410): Pin "VGA_B[7]" is stuck at GND
-    Warning (13410): Pin "VGA_CLK" is stuck at GND
-    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND
-    Warning (13410): Pin "VGA_BLANK_N" is stuck at GND
-    Warning (13410): Pin "VGA_VS" is stuck at GND
-    Warning (13410): Pin "VGA_HS" is stuck at GND
-Info (17049): 174 registers lost all their fanouts during netlist optimizations.
+Info (12128): Elaborating entity "sin_lut" for hierarchy "ray_lut:rl|sin_lut:s0"
+Warning (10230): Verilog HDL assignment warning at lut.sv(46): truncated value with size 32 to match size of target (15)
+Info (12128): Elaborating entity "cos_lut" for hierarchy "ray_lut:rl|cos_lut:c0"
+Warning (10230): Verilog HDL assignment warning at lut.sv(194): truncated value with size 32 to match size of target (15)
+Error (12014): Net "ray_lut:rl|ray[2][31]", which fans out to "ray_lut:rl|ray[2][31]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[31]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[31]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][30]", which fans out to "ray_lut:rl|ray[2][30]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[30]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[30]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][29]", which fans out to "ray_lut:rl|ray[2][29]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[29]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[29]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][28]", which fans out to "ray_lut:rl|ray[2][28]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[28]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[28]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][27]", which fans out to "ray_lut:rl|ray[2][27]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[27]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[27]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][26]", which fans out to "ray_lut:rl|ray[2][26]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[26]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[26]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][25]", which fans out to "ray_lut:rl|ray[2][25]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[25]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[25]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][24]", which fans out to "ray_lut:rl|ray[2][24]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[24]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[24]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][23]", which fans out to "ray_lut:rl|ray[2][23]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[23]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[23]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][22]", which fans out to "ray_lut:rl|ray[2][22]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[22]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[22]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][21]", which fans out to "ray_lut:rl|ray[2][21]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[21]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[21]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][20]", which fans out to "ray_lut:rl|ray[2][20]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[20]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[20]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][19]", which fans out to "ray_lut:rl|ray[2][19]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[19]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[19]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][18]", which fans out to "ray_lut:rl|ray[2][18]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[18]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[18]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][17]", which fans out to "ray_lut:rl|ray[2][17]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[17]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[17]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][16]", which fans out to "ray_lut:rl|ray[2][16]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[16]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[16]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][15]", which fans out to "ray_lut:rl|ray[2][15]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[15]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[15]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][14]", which fans out to "ray_lut:rl|ray[2][14]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[14]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[14]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][13]", which fans out to "ray_lut:rl|ray[2][13]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[13]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[13]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][12]", which fans out to "ray_lut:rl|ray[2][12]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[12]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[12]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][11]", which fans out to "ray_lut:rl|ray[2][11]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[11]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[11]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][10]", which fans out to "ray_lut:rl|ray[2][10]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[10]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[10]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][9]", which fans out to "ray_lut:rl|ray[2][9]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[9]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[9]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][8]", which fans out to "ray_lut:rl|ray[2][8]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[8]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[8]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][7]", which fans out to "ray_lut:rl|ray[2][7]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[7]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[7]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][6]", which fans out to "ray_lut:rl|ray[2][6]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[6]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[6]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][5]", which fans out to "ray_lut:rl|ray[2][5]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[5]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[5]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][4]", which fans out to "ray_lut:rl|ray[2][4]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[4]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[4]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][3]", which fans out to "ray_lut:rl|ray[2][3]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[3]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[3]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][2]", which fans out to "ray_lut:rl|ray[2][2]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[2]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[2]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][1]", which fans out to "ray_lut:rl|ray[2][1]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[1]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[1]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][0]", which fans out to "ray_lut:rl|ray[2][0]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[0]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[0]" File: D:/ECE_385/final_project/lut.sv Line: 184
 Info (144001): Generated suppressed messages file D:/ECE_385/final_project/output_files/final_project_top.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 5 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK_50"
-    Warning (15610): No output dependent on input pin "KEY[0]"
-    Warning (15610): No output dependent on input pin "KEY[1]"
-    Warning (15610): No output dependent on input pin "KEY[2]"
-    Warning (15610): No output dependent on input pin "KEY[3]"
-Info (21057): Implemented 34 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 29 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 60 warnings
-    Info: Peak virtual memory: 2324 megabytes
-    Info: Processing ended: Tue Apr 17 15:01:34 2018
-    Info: Elapsed time: 00:16:40
-    Info: Total CPU time (on all processors): 00:16:53
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 96 errors, 18 warnings
+    Error: Peak virtual memory: 1919 megabytes
+    Error: Processing ended: Tue Apr 17 15:24:09 2018
+    Error: Elapsed time: 00:00:15
+    Error: Total CPU time (on all processors): 00:00:28
 
 
 +------------------------------------------+
