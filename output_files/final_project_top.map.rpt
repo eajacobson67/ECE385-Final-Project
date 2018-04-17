@@ -1,6 +1,11 @@
 Analysis & Synthesis report for final_project_top
+<<<<<<< HEAD
 Tue Apr 17 15:25:04 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 Patches 0.01we SJ Web Edition
+=======
+Tue Apr 17 15:24:09 2018
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+>>>>>>> 096e510c9bfbcbd771310df30cee38ed2cca4faf
 
 
 ---------------------
@@ -10,8 +15,23 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 Patches 0.01we SJ Web Edit
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
+<<<<<<< HEAD
   5. Analysis & Synthesis Messages
   6. Analysis & Synthesis Suppressed Messages
+=======
+  5. Parameter Settings for User Entity Instance: VGA_controller:vga
+  6. Parameter Settings for User Entity Instance: increment_write:comb_4
+  7. Port Connectivity Checks: "ray_lut:rl"
+  8. Port Connectivity Checks: "increment_write:comb_4"
+  9. Port Connectivity Checks: "frame_buffer:fb"
+ 10. Port Connectivity Checks: "VGA_controller:vga"
+ 11. Port Connectivity Checks: "collision_detection:cd|dot_product_scale:cc"
+ 12. Port Connectivity Checks: "collision_detection:cd|dot_product_scale:vdxc"
+ 13. Port Connectivity Checks: "collision_detection:cd"
+ 14. Port Connectivity Checks: "sphere_reg:firstsph"
+ 15. Analysis & Synthesis Messages
+ 16. Analysis & Synthesis Suppressed Messages
+>>>>>>> 096e510c9bfbcbd771310df30cee38ed2cca4faf
 
 
 
@@ -35,6 +55,7 @@ agreement for further details.
 
 
 
+<<<<<<< HEAD
 +------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                                   ;
 +------------------------------------+-----------------------------------------------------------+
@@ -53,6 +74,26 @@ agreement for further details.
 ; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                                 ;
 ; Total PLLs                         ; N/A until Partition Merge                                 ;
 +------------------------------------+-----------------------------------------------------------+
+=======
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Tue Apr 17 15:24:09 2018          ;
+; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
+; Revision Name                      ; final_project_top                          ;
+; Top-level Entity Name              ; final_top_level                            ;
+; Family                             ; Cyclone IV E                               ;
+; Total logic elements               ; N/A until Partition Merge                  ;
+;     Total combinational functions  ; N/A until Partition Merge                  ;
+;     Dedicated logic registers      ; N/A until Partition Merge                  ;
+; Total registers                    ; N/A until Partition Merge                  ;
+; Total pins                         ; N/A until Partition Merge                  ;
+; Total virtual pins                 ; N/A until Partition Merge                  ;
+; Total memory bits                  ; N/A until Partition Merge                  ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
+; Total PLLs                         ; N/A until Partition Merge                  ;
++------------------------------------+--------------------------------------------+
+>>>>>>> 096e510c9bfbcbd771310df30cee38ed2cca4faf
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -142,6 +183,7 @@ agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
+<<<<<<< HEAD
 +------------------------------------------+
 ; Parallel Compilation                     ;
 +----------------------------+-------------+
@@ -157,6 +199,121 @@ agreement for further details.
 ;     Processor 1            ; 100.0%      ;
 ;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
+=======
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: VGA_controller:vga ;
++----------------+------------+-----------------------------------+
+; Parameter Name ; Value      ; Type                              ;
++----------------+------------+-----------------------------------+
+; H_TOTAL        ; 1100100000 ; Unsigned Binary                   ;
+; V_TOTAL        ; 1000001101 ; Unsigned Binary                   ;
++----------------+------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: increment_write:comb_4 ;
++----------------+------------+---------------------------------------+
+; Parameter Name ; Value      ; Type                                  ;
++----------------+------------+---------------------------------------+
+; H_TOTAL        ; 1010000000 ; Unsigned Binary                       ;
+; V_TOTAL        ; 0111100000 ; Unsigned Binary                       ;
++----------------+------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "ray_lut:rl"         ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; theta[15..0] ; Input ; Info     ; Stuck at GND ;
+; phi[15..0]   ; Input ; Info     ; Stuck at GND ;
++--------------+-------+----------+--------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "increment_write:comb_4" ;
++------+-------+----------+--------------------------+
+; Port ; Type  ; Severity ; Details                  ;
++------+-------+----------+--------------------------+
+; Clk  ; Input ; Info     ; Stuck at GND             ;
++------+-------+----------+--------------------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "frame_buffer:fb" ;
++-------+-------+----------+------------------+
+; Port  ; Type  ; Severity ; Details          ;
++-------+-------+----------+------------------+
+; Write ; Input ; Info     ; Stuck at GND     ;
++-------+-------+----------+------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "VGA_controller:vga" ;
++---------+-------+----------+-------------------+
+; Port    ; Type  ; Severity ; Details           ;
++---------+-------+----------+-------------------+
+; VGA_CLK ; Input ; Info     ; Stuck at GND      ;
++---------+-------+----------+-------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "collision_detection:cd|dot_product_scale:cc" ;
++------+--------+----------+----------------------------------------------+
+; Port ; Type   ; Severity ; Details                                      ;
++------+--------+----------+----------------------------------------------+
+; s    ; Output ; Info     ; Explicitly unconnected                       ;
++------+--------+----------+----------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "collision_detection:cd|dot_product_scale:vdxc" ;
++------+--------+----------+------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                        ;
++------+--------+----------+------------------------------------------------+
+; s    ; Output ; Info     ; Explicitly unconnected                         ;
++------+--------+----------+------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "collision_detection:cd"         ;
++---------------+--------+----------+------------------------+
+; Port          ; Type   ; Severity ; Details                ;
++---------------+--------+----------+------------------------+
+; tbest[31..25] ; Input  ; Info     ; Stuck at GND           ;
+; tbest[23..0]  ; Input  ; Info     ; Stuck at GND           ;
+; tbest[24]     ; Input  ; Info     ; Stuck at VCC           ;
+; tnew          ; Output ; Info     ; Explicitly unconnected ;
++---------------+--------+----------+------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "sphere_reg:firstsph"      ;
++--------------------+-------+----------+--------------+
+; Port               ; Type  ; Severity ; Details      ;
++--------------------+-------+----------+--------------+
+; sphere_clk         ; Input ; Info     ; Stuck at GND ;
+; nextcol            ; Input ; Info     ; Stuck at VCC ;
+; nextpos[2]         ; Input ; Info     ; Stuck at GND ;
+; nextpos[1][31..17] ; Input ; Info     ; Stuck at GND ;
+; nextpos[1][15..0]  ; Input ; Info     ; Stuck at GND ;
+; nextpos[1][16]     ; Input ; Info     ; Stuck at VCC ;
+; nextpos[0]         ; Input ; Info     ; Stuck at GND ;
++--------------------+-------+----------+--------------+
+>>>>>>> 096e510c9bfbcbd771310df30cee38ed2cca4faf
 
 
 +-------------------------------+
@@ -164,10 +321,17 @@ agreement for further details.
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
+<<<<<<< HEAD
     Info: Version 15.0.0 Build 145 04/22/2015 Patches 0.01we SJ Web Edition
     Info: Processing started: Tue Apr 17 15:24:52 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final_project -c final_project_top
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+=======
+    Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+    Info: Processing started: Tue Apr 17 15:23:54 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final_project -c final_project_top
+Warning (20028): Parallel compilation is not licensed and has been disabled
+>>>>>>> 096e510c9bfbcbd771310df30cee38ed2cca4faf
 Info (12021): Found 3 design units, including 3 entities, in source file lut.sv
     Info (12023): Found entity 1: sin_lut
     Info (12023): Found entity 2: cos_lut
@@ -206,6 +370,7 @@ Warning (10236): Verilog HDL Implicit Net warning at final_top_level.sv(41): cre
 Warning (10236): Verilog HDL Implicit Net warning at frame_buffer.sv(14): created implicit net for "Write_Index"
 Warning (10236): Verilog HDL Implicit Net warning at frame_buffer.sv(15): created implicit net for "Read_Index"
 Warning (10236): Verilog HDL Implicit Net warning at collision_detection.sv(21): created implicit net for "radsq"
+<<<<<<< HEAD
 Error (10161): Verilog HDL error at lut.sv(56): object "clk" is not declared File: C:/altera/15.0/Programs/385FinalProject/lut.sv Line: 56
 Info (144001): Generated suppressed messages file C:/altera/15.0/Programs/385FinalProject/output_files/final_project_top.map.smsg
 Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 5 warnings
@@ -213,6 +378,138 @@ Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 5 warni
     Error: Processing ended: Tue Apr 17 15:25:05 2018
     Error: Elapsed time: 00:00:13
     Error: Total CPU time (on all processors): 00:00:27
+=======
+Critical Warning (10846): Verilog HDL Instantiation warning at final_top_level.sv(36): instance has no name
+Info (12127): Elaborating entity "final_top_level" for the top level hierarchy
+Warning (10858): Verilog HDL warning at final_top_level.sv(16): object State used but never assigned
+Warning (10036): Verilog HDL or VHDL warning at final_top_level.sv(16): object "State_n" assigned a value but never read
+Warning (10030): Net "VGA_CLK" at final_top_level.sv(11) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "State.Reset" at final_top_level.sv(16) has no driver or initial value, using a default initial value '0'
+Info (12128): Elaborating entity "sphere_reg" for hierarchy "sphere_reg:firstsph"
+Info (12128): Elaborating entity "color_mapper" for hierarchy "color_mapper:colmap"
+Info (12128): Elaborating entity "collision_detection" for hierarchy "collision_detection:cd"
+Warning (10230): Verilog HDL assignment warning at collision_detection.sv(21): truncated value with size 32 to match size of target (1)
+Info (12128): Elaborating entity "dot_product_scale" for hierarchy "collision_detection:cd|dot_product_scale:vdxc"
+Info (12128): Elaborating entity "mult_real" for hierarchy "collision_detection:cd|dot_product_scale:vdxc|mult_real:x"
+Info (12128): Elaborating entity "sqrt_real" for hierarchy "collision_detection:cd|sqrt_real:rbsqrt"
+Info (12128): Elaborating entity "VGA_controller" for hierarchy "VGA_controller:vga"
+Info (12128): Elaborating entity "frame_buffer" for hierarchy "frame_buffer:fb"
+Warning (10230): Verilog HDL assignment warning at frame_buffer.sv(14): truncated value with size 10 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at frame_buffer.sv(15): truncated value with size 10 to match size of target (1)
+Info (12128): Elaborating entity "increment_write" for hierarchy "increment_write:comb_4"
+Info (12128): Elaborating entity "y_ang_lut" for hierarchy "y_ang_lut:yang"
+Warning (10230): Verilog HDL assignment warning at ang_lut.sv(13): truncated value with size 32 to match size of target (16)
+Info (12128): Elaborating entity "x_ang_lut" for hierarchy "x_ang_lut:xang"
+Warning (10036): Verilog HDL or VHDL warning at ang_lut.sv(133): object "dPhi" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at ang_lut.sv(133): truncated value with size 32 to match size of target (1)
+Info (12128): Elaborating entity "ray_lut" for hierarchy "ray_lut:rl"
+Info (12128): Elaborating entity "sin_lut" for hierarchy "ray_lut:rl|sin_lut:s0"
+Warning (10230): Verilog HDL assignment warning at lut.sv(46): truncated value with size 32 to match size of target (15)
+Info (12128): Elaborating entity "cos_lut" for hierarchy "ray_lut:rl|cos_lut:c0"
+Warning (10230): Verilog HDL assignment warning at lut.sv(194): truncated value with size 32 to match size of target (15)
+Error (12014): Net "ray_lut:rl|ray[2][31]", which fans out to "ray_lut:rl|ray[2][31]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[31]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[31]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][30]", which fans out to "ray_lut:rl|ray[2][30]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[30]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[30]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][29]", which fans out to "ray_lut:rl|ray[2][29]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[29]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[29]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][28]", which fans out to "ray_lut:rl|ray[2][28]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[28]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[28]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][27]", which fans out to "ray_lut:rl|ray[2][27]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[27]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[27]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][26]", which fans out to "ray_lut:rl|ray[2][26]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[26]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[26]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][25]", which fans out to "ray_lut:rl|ray[2][25]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[25]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[25]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][24]", which fans out to "ray_lut:rl|ray[2][24]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[24]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[24]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][23]", which fans out to "ray_lut:rl|ray[2][23]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[23]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[23]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][22]", which fans out to "ray_lut:rl|ray[2][22]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[22]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[22]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][21]", which fans out to "ray_lut:rl|ray[2][21]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[21]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[21]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][20]", which fans out to "ray_lut:rl|ray[2][20]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[20]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[20]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][19]", which fans out to "ray_lut:rl|ray[2][19]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[19]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[19]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][18]", which fans out to "ray_lut:rl|ray[2][18]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[18]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[18]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][17]", which fans out to "ray_lut:rl|ray[2][17]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[17]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[17]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][16]", which fans out to "ray_lut:rl|ray[2][16]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[16]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[16]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][15]", which fans out to "ray_lut:rl|ray[2][15]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[15]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[15]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][14]", which fans out to "ray_lut:rl|ray[2][14]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[14]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[14]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][13]", which fans out to "ray_lut:rl|ray[2][13]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[13]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[13]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][12]", which fans out to "ray_lut:rl|ray[2][12]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[12]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[12]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][11]", which fans out to "ray_lut:rl|ray[2][11]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[11]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[11]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][10]", which fans out to "ray_lut:rl|ray[2][10]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[10]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[10]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][9]", which fans out to "ray_lut:rl|ray[2][9]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[9]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[9]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][8]", which fans out to "ray_lut:rl|ray[2][8]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[8]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[8]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][7]", which fans out to "ray_lut:rl|ray[2][7]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[7]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[7]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][6]", which fans out to "ray_lut:rl|ray[2][6]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[6]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[6]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][5]", which fans out to "ray_lut:rl|ray[2][5]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[5]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[5]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][4]", which fans out to "ray_lut:rl|ray[2][4]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[4]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[4]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][3]", which fans out to "ray_lut:rl|ray[2][3]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[3]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[3]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][2]", which fans out to "ray_lut:rl|ray[2][2]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[2]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[2]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][1]", which fans out to "ray_lut:rl|ray[2][1]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[1]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[1]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Error (12014): Net "ray_lut:rl|ray[2][0]", which fans out to "ray_lut:rl|ray[2][0]", cannot be assigned more than one value File: D:/ECE_385/final_project/lut.sv Line: 329
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c0|cos[0]" File: D:/ECE_385/final_project/lut.sv Line: 184
+    Error (12015): Net is fed by "ray_lut:rl|cos_lut:c1|cos[0]" File: D:/ECE_385/final_project/lut.sv Line: 184
+Info (144001): Generated suppressed messages file D:/ECE_385/final_project/output_files/final_project_top.map.smsg
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 96 errors, 18 warnings
+    Error: Peak virtual memory: 1919 megabytes
+    Error: Processing ended: Tue Apr 17 15:24:09 2018
+    Error: Elapsed time: 00:00:15
+    Error: Total CPU time (on all processors): 00:00:28
+>>>>>>> 096e510c9bfbcbd771310df30cee38ed2cca4faf
 
 
 +------------------------------------------+
