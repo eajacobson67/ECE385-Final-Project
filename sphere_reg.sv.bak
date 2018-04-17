@@ -1,0 +1,12 @@
+typedef logic [2:0] [31:0] vector;
+typedef logic [31:0] fixed_real;
+typedef logic [2:0] [7:0] color;
+
+module sphere_reg (
+	input logic sphere_clk, exists_in,
+	input color nextcol,
+	input vector nextpos,
+	output vector currentpos,
+	output color currentcol,
+	output logic exists_out
+);
