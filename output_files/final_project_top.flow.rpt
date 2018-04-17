@@ -1,6 +1,6 @@
 Flow report for final_project_top
-Tue Apr 17 15:02:02 2018
-Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+Tue Apr 17 15:25:04 2018
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 Patches 0.01we SJ Web Edition
 
 
 ---------------------
@@ -38,26 +38,26 @@ agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------+
-; Flow Summary                                                                    ;
-+------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Tue Apr 17 15:02:02 2018      ;
-; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
-; Revision Name                      ; final_project_top                          ;
-; Top-level Entity Name              ; final_top_level                            ;
-; Family                             ; Cyclone IV E                               ;
-; Device                             ; EP4CE115F29C7                              ;
-; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 0 / 114,480 ( 0 % )                        ;
-;     Total combinational functions  ; 0 / 114,480 ( 0 % )                        ;
-;     Dedicated logic registers      ; 0 / 114,480 ( 0 % )                        ;
-; Total registers                    ; 0                                          ;
-; Total pins                         ; 34 / 529 ( 6 % )                           ;
-; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                      ;
-; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                            ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                              ;
-+------------------------------------+--------------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Flow Summary                                                                                   ;
++------------------------------------+-----------------------------------------------------------+
+; Flow Status                        ; Flow Failed - Tue Apr 17 15:25:04 2018                    ;
+; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 Patches 0.01we SJ Web Edition ;
+; Revision Name                      ; final_project_top                                         ;
+; Top-level Entity Name              ; final_top_level                                           ;
+; Family                             ; Cyclone IV E                                              ;
+; Device                             ; EP4CE115F29C7                                             ;
+; Timing Models                      ; Final                                                     ;
+; Total logic elements               ; N/A until Partition Merge                                 ;
+;     Total combinational functions  ; N/A until Partition Merge                                 ;
+;     Dedicated logic registers      ; N/A until Partition Merge                                 ;
+; Total registers                    ; N/A until Partition Merge                                 ;
+; Total pins                         ; N/A until Partition Merge                                 ;
+; Total virtual pins                 ; N/A until Partition Merge                                 ;
+; Total memory bits                  ; N/A until Partition Merge                                 ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                                 ;
+; Total PLLs                         ; N/A until Partition Merge                                 ;
++------------------------------------+-----------------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/17/2018 14:44:54 ;
+; Start date & time ; 04/17/2018 15:24:52 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; final_project_top   ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+-------------------+-----------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value     ; Entity Name     ; Section Id     ;
 +-------------------------------------+---------------------------------------+-------------------+-----------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 238368721128666.152399429405844       ; --                ; --              ; --             ;
+; COMPILER_SIGNATURE_ID               ; 167690710926163.152399669201904       ; --                ; --              ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                     ; --                ; --              ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)       ; <None>            ; --              ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --                ; --              ; --             ;
@@ -93,41 +93,29 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+-------------------+-----------------+----------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                             ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:16:39     ; 1.0                     ; 2324 MB             ; 00:16:53                           ;
-; Fitter                    ; 00:00:13     ; 1.0                     ; 1214 MB             ; 00:00:12                           ;
-; Assembler                 ; 00:00:05     ; 1.0                     ; 666 MB              ; 00:00:05                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 813 MB              ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 634 MB              ; 00:00:01                           ;
-; Total                     ; 00:17:00     ; --                      ; --                  ; 00:17:13                           ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 710 MB              ; 00:00:27                           ;
+; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:27                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; RarePepe         ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; RarePepe         ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; RarePepe         ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; RarePepe         ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; RarePepe         ; Windows 7 ; 6.2        ; x86_64         ;
-+---------------------------+------------------+-----------+------------+----------------+
++-----------------------------------------------------------------------------------+
+; Flow OS Summary                                                                   ;
++----------------------+------------------+-----------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++----------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-9VU7VI0  ; Windows 7 ; 6.2        ; x86_64         ;
++----------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off final_project -c final_project_top
-quartus_fit --read_settings_files=off --write_settings_files=off final_project -c final_project_top
-quartus_asm --read_settings_files=off --write_settings_files=off final_project -c final_project_top
-quartus_sta final_project -c final_project_top
-quartus_eda --read_settings_files=off --write_settings_files=off final_project -c final_project_top
 
 
 
