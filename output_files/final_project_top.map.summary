@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-Analysis & Synthesis Status : Failed - Tue Apr 17 15:25:04 2018
+Analysis & Synthesis Status : Failed - Tue Apr 17 15:29:08 2018
 Quartus II 64-Bit Version : 15.0.0 Build 145 04/22/2015 Patches 0.01we SJ Web Edition
-=======
-Analysis & Synthesis Status : Failed - Tue Apr 17 15:24:09 2018
-Quartus II 64-Bit Version : 15.0.0 Build 145 04/22/2015 SJ Web Edition
->>>>>>> 096e510c9bfbcbd771310df30cee38ed2cca4faf
 Revision Name : final_project_top
 Top-level Entity Name : final_top_level
 Family : Cyclone IV E

@@ -346,6 +346,6 @@ mult_real m1(.a(sinTheta),.b(cosPhi),.c(z));
 
 assign x = cosTheta;
 
-assign ray = {x,y,z};
+assign ray = {{x},{y},{z}};
 
 endmodule
