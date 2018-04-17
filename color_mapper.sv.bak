@@ -1,0 +1,24 @@
+module  color_mapper (
+	input is_ball,
+   input [9:0] DrawX, DrawY,
+   output logic [7:0] VGA_R, VGA_G, VGA_B
+);
+
+always_comb begin
+	  if (is_ball == 1'b1) 
+	  begin
+			// White ball
+			Red = 8'hff;
+			Green = 8'hff;
+			Blue = 8'hff;
+	  end
+	  else 
+	  begin
+			// Background with nice color gradient
+			Red = 8'h3f; 
+			Green = 8'h00;
+			Blue = 8'h7f - {1'b0, DrawX[9:3]};
+	  end
+	end 
+
+endmodule 
