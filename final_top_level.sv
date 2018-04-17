@@ -1,8 +1,6 @@
 typedef logic [2:0] [31:0] vector;
 typedef logic [31:0] fixed_real;
 typedef logic [2:0] [31:0] vector;
-typedef logic [31:0] fixed_real;
-typedef logic [2:0] [7:0] color;
 
 module final_top_level (
 	input logic CLOCK_50,
@@ -29,7 +27,7 @@ color_mapper colmap(.is_ball(collide), .DrawX(DrawX), .DrawY(DrawY), .colin(sphe
 
 collision_detection cd(.sphere(sphere1pos), .ray(lookray), .tbest(32'h01000000), .tnew(), .collide(collide));
 
-VGA_controller vga(.Clk(CLOCK_50), .Reset(~KEY[0]), .*);
+VGA_controller vga(.Clk(VGA_CLK), .Reset(~KEY[0]), .*);
 
 frame_buffer fb(.Clk(CLOCK_50), .Write(reset_clk), .*, .WriteColor(colorout), .ReadColor({{VGA_R}, {VGA_G}, {VGA_B}}));
 
@@ -39,6 +37,8 @@ y_ang_lut yang(.Clk(CLOCK_50), .Y(WriteY), .dPhi(dPhi));
 x_ang_lut xang(.Clk(CLOCK_50), .X(WriteX), .dTheta(dTheta));
 
 ray_lut rl(.Clk(CLOCK_50), .theta((16'd90 + dTheta) << 16), .phi((16'd90 + dPhi) << 16), .ray(lookray));
+
+vga_clk vga_clk_instance(.inclk0(Clk), .c0(VGA_CLK));
 
 
 always_comb begin
