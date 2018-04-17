@@ -1,6 +1,6 @@
 Analysis & Synthesis report for final_project_top
-Tue Apr 17 14:31:28 2018
-Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 Patches 0.01we SJ Web Edition
+Tue Apr 17 15:01:34 2018
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
 ---------------------
@@ -53,24 +53,24 @@ agreement for further details.
 
 
 
-+------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                                   ;
-+------------------------------------+-----------------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 17 14:31:28 2018                     ;
-; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 Patches 0.01we SJ Web Edition ;
-; Revision Name                      ; final_project_top                                         ;
-; Top-level Entity Name              ; final_top_level                                           ;
-; Family                             ; Cyclone IV E                                              ;
-; Total logic elements               ; 0                                                         ;
-;     Total combinational functions  ; 0                                                         ;
-;     Dedicated logic registers      ; 0                                                         ;
-; Total registers                    ; 0                                                         ;
-; Total pins                         ; 34                                                        ;
-; Total virtual pins                 ; 0                                                         ;
-; Total memory bits                  ; 0                                                         ;
-; Embedded Multiplier 9-bit elements ; 0                                                         ;
-; Total PLLs                         ; 0                                                         ;
-+------------------------------------+-----------------------------------------------------------+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Apr 17 15:01:34 2018      ;
+; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
+; Revision Name                      ; final_project_top                          ;
+; Top-level Entity Name              ; final_top_level                            ;
+; Family                             ; Cyclone IV E                               ;
+; Total logic elements               ; 0                                          ;
+;     Total combinational functions  ; 0                                          ;
+;     Dedicated logic registers      ; 0                                          ;
+; Total registers                    ; 0                                          ;
+; Total pins                         ; 34                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -160,39 +160,33 @@ agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                       ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                   ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+---------+
-; lut.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/altera/15.0/Programs/385FinalProject/lut.sv                 ;         ;
-; ang_lut.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/altera/15.0/Programs/385FinalProject/ang_lut.sv             ;         ;
-; VGA_controller.sv                ; yes             ; User SystemVerilog HDL File  ; C:/altera/15.0/Programs/385FinalProject/VGA_controller.sv      ;         ;
-; final_top_level.sv               ; yes             ; User SystemVerilog HDL File  ; C:/altera/15.0/Programs/385FinalProject/final_top_level.sv     ;         ;
-; vector.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/altera/15.0/Programs/385FinalProject/vector.sv              ;         ;
-; frame_buffer.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/altera/15.0/Programs/385FinalProject/frame_buffer.sv        ;         ;
-; collision_detection.sv           ; yes             ; User SystemVerilog HDL File  ; C:/altera/15.0/Programs/385FinalProject/collision_detection.sv ;         ;
-; sphere_reg.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/altera/15.0/Programs/385FinalProject/sphere_reg.sv          ;         ;
-; WriteUpdate.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/altera/15.0/Programs/385FinalProject/WriteUpdate.sv         ;         ;
-; color_mapper.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/altera/15.0/Programs/385FinalProject/color_mapper.sv        ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                        ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                    ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------+---------+
+; lut.sv                           ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/lut.sv                 ;         ;
+; ang_lut.sv                       ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/ang_lut.sv             ;         ;
+; VGA_controller.sv                ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/VGA_controller.sv      ;         ;
+; final_top_level.sv               ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/final_top_level.sv     ;         ;
+; vector.sv                        ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/vector.sv              ;         ;
+; frame_buffer.sv                  ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/frame_buffer.sv        ;         ;
+; collision_detection.sv           ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/collision_detection.sv ;         ;
+; sphere_reg.sv                    ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/sphere_reg.sv          ;         ;
+; WriteUpdate.sv                   ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/WriteUpdate.sv         ;         ;
+; color_mapper.sv                  ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/color_mapper.sv        ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------+---------+
 
 
 +--------------------------------------------------------+
@@ -533,10 +527,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 15.0.0 Build 145 04/22/2015 Patches 0.01we SJ Web Edition
-    Info: Processing started: Tue Apr 17 14:12:49 2018
+    Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+    Info: Processing started: Tue Apr 17 14:44:54 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final_project -c final_project_top
-Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file lut.sv
     Info (12023): Found entity 1: ray_lut
 Info (12021): Found 2 design units, including 2 entities, in source file ang_lut.sv
@@ -635,7 +629,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_VS" is stuck at GND
     Warning (13410): Pin "VGA_HS" is stuck at GND
 Info (17049): 174 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/altera/15.0/Programs/385FinalProject/output_files/final_project_top.map.smsg
+Info (144001): Generated suppressed messages file D:/ECE_385/final_project/output_files/final_project_top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 5 input pin(s) that do not drive logic
@@ -647,16 +641,16 @@ Warning (21074): Design contains 5 input pin(s) that do not drive logic
 Info (21057): Implemented 34 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 29 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 59 warnings
-    Info: Peak virtual memory: 2329 megabytes
-    Info: Processing ended: Tue Apr 17 14:31:28 2018
-    Info: Elapsed time: 00:18:39
-    Info: Total CPU time (on all processors): 00:17:20
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 60 warnings
+    Info: Peak virtual memory: 2324 megabytes
+    Info: Processing ended: Tue Apr 17 15:01:34 2018
+    Info: Elapsed time: 00:16:40
+    Info: Total CPU time (on all processors): 00:16:53
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/altera/15.0/Programs/385FinalProject/output_files/final_project_top.map.smsg.
+The suppressed messages can be found in D:/ECE_385/final_project/output_files/final_project_top.map.smsg.
 
 
