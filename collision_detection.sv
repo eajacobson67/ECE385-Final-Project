@@ -21,20 +21,17 @@ assign rad = 32'h0200000;
 assign radsq = rad << 5;
 
 always_comb begin
-
-	bsqr = 0;
-	disc = 0;
+	disc = radsq - bsqr;
 	collide = 0;
 	tnew = tbest;
 	
-	if (tbest > v - rad) begin
-		bsqr = cdot - vsqr;
-		if (radsq > bsqr) begin
-			disc = radsq - bsqr;
-			tnew = v - sqrt;
-			collide = 1'b1;
-		end
+	//if (tbest > v - rad) begin
+	bsqr = cdot - vsqr;
+	if (radsq > bsqr) begin
+		tnew = v - sqrt;
+		collide = 1'b1;
 	end
+	//end
 
 end
 
