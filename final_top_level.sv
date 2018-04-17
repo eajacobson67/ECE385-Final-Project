@@ -22,16 +22,18 @@ logic [9:0] DrawX, DrawY, WriteX, WriteY;
 
 logic [15:0] dPhi, dTheta;
 
-sphere_reg firstsph(.sphere_clk(reset_clk), .nextcol({{8{8'hff}}, {8{8'hff}}, {8{8'hff}}}), .nextpos({{32'b0}, {32'h00010000}, {32'b0}}),
+vga_clk vgapll(.inclk0(CLOCK_50),.c0(VGA_CLK));
+
+sphere_reg firstsph(.sphere_clk(reset_clk), .nextcol({{8{8'hff}}, {8{8'hff}}, {8{8'hff}}}), .nextpos({{32'b0}, {32'h01300000}, {32'b0}}),
 	.currentpos(sphere1pos), .currentcol(sphere1col));
 	
 color_mapper colmap(.is_ball(collide), .DrawX(DrawX), .DrawY(DrawY), .colin(sphere1col), .col(colorout));
 
-collision_detection cd(.sphere(sphere1pos), .ray(lookray), .tbest(32'h01000000), .tnew(), .collide(collide));
+collision_detection cd(.sphere(sphere1pos), .ray(lookray), .tbest(32'h8FFF0000), .tnew(), .collide(collide));
 
 VGA_controller vga(.Clk(CLOCK_50), .Reset(~KEY[0]), .*);
 
-frame_buffer fb(.Clk(CLOCK_50), .Write(reset_clk), .*, .WriteColor(colorout), .ReadColor({{VGA_R}, {VGA_G}, {VGA_B}}));
+frame_buffer fb(.Clk(CLOCK_50), .Write(reset_clk), .*, .WriteColor(colorout), .ReadColor({{VGA_B}, {VGA_G}, {VGA_R}}));
 
 increment_write(.Clk(reset_clk), .Reset(~KEY[0]), .*);
 
@@ -40,18 +42,26 @@ x_ang_lut xang(.Clk(CLOCK_50), .X(WriteX), .dTheta(dTheta));
 
 ray_lut rl(.Clk(CLOCK_50), .theta((16'd90 + dTheta) << 16), .phi((16'd90 + dPhi) << 16), .ray(lookray));
 
+always_ff @ (posedge CLOCK_50 or negedge KEY[0]) begin
+	if(~KEY[0])begin
+		State = Reset;
+	end else begin
+		State = State_n;
+		case (State_n)
+			Reset: reset_clk <= 1'b1;
+			Sphere1: reset_clk <= 1'b0;
+		endcase
+	end
+end
 
 always_comb begin
-
 State_n = State;
 case (State)
 	Reset: begin
 		State_n = Sphere1;
-		reset_clk = 1'b1;
 	end
 	Sphere1: begin
 		State_n = Reset;
-		reset_clk = 1'b0;
 	end
 endcase
 

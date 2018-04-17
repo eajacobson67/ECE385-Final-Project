@@ -19,9 +19,9 @@ always_comb begin
 	  else 
 	  begin
 			// Background with nice color gradient
-			col[2] = 8'h3f; 
+			col[2] = 8'h00; 
 			col[1] = 8'h00;
-			col[0] = 8'h7f - {1'b0, DrawX[9:3]};
+			col[0] = 8'hff;
 	  end
 	end 
 
