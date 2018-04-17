@@ -1,5 +1,5 @@
 Analysis & Synthesis report for final_project_top
-Mon Apr 16 23:49:40 2018
+Tue Apr 17 14:31:28 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 Patches 0.01we SJ Web Edition
 
 
@@ -13,10 +13,23 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 Patches 0.01we SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: VGA_controller:vga
+ 12. Parameter Settings for User Entity Instance: increment_write:comb_4
+ 13. Port Connectivity Checks: "ray_lut:rl"
+ 14. Port Connectivity Checks: "increment_write:comb_4"
+ 15. Port Connectivity Checks: "frame_buffer:fb"
+ 16. Port Connectivity Checks: "VGA_controller:vga"
+ 17. Port Connectivity Checks: "collision_detection:cd|dot_product_scale:cc"
+ 18. Port Connectivity Checks: "collision_detection:cd|dot_product_scale:vdxc"
+ 19. Port Connectivity Checks: "collision_detection:cd"
+ 20. Port Connectivity Checks: "sphere_reg:firstsph"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+ 24. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -43,7 +56,7 @@ agreement for further details.
 +------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                                   ;
 +------------------------------------+-----------------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Apr 16 23:49:40 2018                     ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr 17 14:31:28 2018                     ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 Patches 0.01we SJ Web Edition ;
 ; Revision Name                      ; final_project_top                                         ;
 ; Top-level Entity Name              ; final_top_level                                           ;
@@ -164,13 +177,22 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                               ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------+---------+
-; final_top_level.sv               ; yes             ; User SystemVerilog HDL File  ; C:/altera/15.0/Programs/385FinalProject/final_top_level.sv ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                       ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                   ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+---------+
+; lut.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/altera/15.0/Programs/385FinalProject/lut.sv                 ;         ;
+; ang_lut.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/altera/15.0/Programs/385FinalProject/ang_lut.sv             ;         ;
+; VGA_controller.sv                ; yes             ; User SystemVerilog HDL File  ; C:/altera/15.0/Programs/385FinalProject/VGA_controller.sv      ;         ;
+; final_top_level.sv               ; yes             ; User SystemVerilog HDL File  ; C:/altera/15.0/Programs/385FinalProject/final_top_level.sv     ;         ;
+; vector.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/altera/15.0/Programs/385FinalProject/vector.sv              ;         ;
+; frame_buffer.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/altera/15.0/Programs/385FinalProject/frame_buffer.sv        ;         ;
+; collision_detection.sv           ; yes             ; User SystemVerilog HDL File  ; C:/altera/15.0/Programs/385FinalProject/collision_detection.sv ;         ;
+; sphere_reg.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/altera/15.0/Programs/385FinalProject/sphere_reg.sv          ;         ;
+; WriteUpdate.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/altera/15.0/Programs/385FinalProject/WriteUpdate.sv         ;         ;
+; color_mapper.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/altera/15.0/Programs/385FinalProject/color_mapper.sv        ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------+
@@ -214,6 +236,155 @@ agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
++----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                               ;
++-----------------------------------------+----------------------------------------+
+; Register name                           ; Reason for Removal                     ;
++-----------------------------------------+----------------------------------------+
+; y_ang_lut:yang|out[6..15]               ; Stuck at GND due to stuck port data_in ;
+; increment_write:comb_4|v_counter[0..9]  ; Stuck at GND due to stuck port clock   ;
+; increment_write:comb_4|h_counter[0..9]  ; Stuck at GND due to stuck port clock   ;
+; sphere_reg:firstsph|currentcol[0][0]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentcol[0][1]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentcol[0][2]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentcol[0][3]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentcol[0][4]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentcol[0][5]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentcol[0][6]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentcol[0][7]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentcol[1][0]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentcol[1][1]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentcol[1][2]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentcol[1][3]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentcol[1][4]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentcol[1][5]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentcol[1][6]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentcol[1][7]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentcol[2][0]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentcol[2][1]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentcol[2][2]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentcol[2][3]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentcol[2][4]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentcol[2][5]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentcol[2][6]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentcol[2][7]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][31]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][30]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][29]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][28]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][27]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][26]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][25]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][24]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][23]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][22]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][21]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][20]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][19]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][18]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][17]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][16]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][15]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][14]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][13]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][12]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][11]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][10]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][9]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][8]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][7]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][6]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][5]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][4]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][3]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][2]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][1]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[1][0]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][31]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][30]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][29]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][28]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][27]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][26]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][25]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][24]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][23]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][22]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][21]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][20]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][19]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][18]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][17]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][16]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][15]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][14]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][13]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][12]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][11]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][10]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][9]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][8]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][7]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][6]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][5]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][4]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][3]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][2]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][1]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[0][0]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][31]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][30]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][29]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][28]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][27]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][26]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][25]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][24]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][23]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][22]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][21]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][20]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][19]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][18]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][17]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][16]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][15]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][14]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][13]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][12]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][11]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][10]   ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][9]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][8]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][7]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][6]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][5]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][4]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][3]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][2]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][1]    ; Lost fanout                            ;
+; sphere_reg:firstsph|currentpos[2][0]    ; Lost fanout                            ;
+; VGA_controller:vga|v_counter[0..9]      ; Stuck at GND due to stuck port clock   ;
+; VGA_controller:vga|h_counter[0..9]      ; Stuck at GND due to stuck port clock   ;
+; VGA_controller:vga|VGA_BLANK_N          ; Stuck at GND due to stuck port clock   ;
+; VGA_controller:vga|VGA_VS               ; Stuck at GND due to stuck port clock   ;
+; VGA_controller:vga|VGA_HS               ; Stuck at GND due to stuck port clock   ;
+; ray_lut:rl|out[0..47]                   ; Lost fanout                            ;
+; y_ang_lut:yang|out[0..5]                ; Lost fanout                            ;
+; Total Number of Removed Registers = 227 ;                                        ;
++-----------------------------------------+----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                             ;
++-----------------------+---------------------------+---------------------------------------------------------------------+
+; Register name         ; Reason for Removal        ; Registers Removed due to This Register                              ;
++-----------------------+---------------------------+---------------------------------------------------------------------+
+; y_ang_lut:yang|out[7] ; Stuck at GND              ; y_ang_lut:yang|out[4], y_ang_lut:yang|out[3], y_ang_lut:yang|out[1] ;
+;                       ; due to stuck port data_in ;                                                                     ;
++-----------------------+---------------------------+---------------------------------------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
@@ -227,6 +398,110 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: VGA_controller:vga ;
++----------------+------------+-----------------------------------+
+; Parameter Name ; Value      ; Type                              ;
++----------------+------------+-----------------------------------+
+; H_TOTAL        ; 1100100000 ; Unsigned Binary                   ;
+; V_TOTAL        ; 1000001101 ; Unsigned Binary                   ;
++----------------+------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: increment_write:comb_4 ;
++----------------+------------+---------------------------------------+
+; Parameter Name ; Value      ; Type                                  ;
++----------------+------------+---------------------------------------+
+; H_TOTAL        ; 1010000000 ; Unsigned Binary                       ;
+; V_TOTAL        ; 0111100000 ; Unsigned Binary                       ;
++----------------+------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "ray_lut:rl"         ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; theta[15..0] ; Input ; Info     ; Stuck at GND ;
+; phi[15..0]   ; Input ; Info     ; Stuck at GND ;
++--------------+-------+----------+--------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "increment_write:comb_4" ;
++------+-------+----------+--------------------------+
+; Port ; Type  ; Severity ; Details                  ;
++------+-------+----------+--------------------------+
+; Clk  ; Input ; Info     ; Stuck at GND             ;
++------+-------+----------+--------------------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "frame_buffer:fb" ;
++-------+-------+----------+------------------+
+; Port  ; Type  ; Severity ; Details          ;
++-------+-------+----------+------------------+
+; Write ; Input ; Info     ; Stuck at GND     ;
++-------+-------+----------+------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "VGA_controller:vga" ;
++---------+-------+----------+-------------------+
+; Port    ; Type  ; Severity ; Details           ;
++---------+-------+----------+-------------------+
+; VGA_CLK ; Input ; Info     ; Stuck at GND      ;
++---------+-------+----------+-------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "collision_detection:cd|dot_product_scale:cc" ;
++------+--------+----------+----------------------------------------------+
+; Port ; Type   ; Severity ; Details                                      ;
++------+--------+----------+----------------------------------------------+
+; s    ; Output ; Info     ; Explicitly unconnected                       ;
++------+--------+----------+----------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "collision_detection:cd|dot_product_scale:vdxc" ;
++------+--------+----------+------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                        ;
++------+--------+----------+------------------------------------------------+
+; s    ; Output ; Info     ; Explicitly unconnected                         ;
++------+--------+----------+------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "collision_detection:cd"         ;
++---------------+--------+----------+------------------------+
+; Port          ; Type   ; Severity ; Details                ;
++---------------+--------+----------+------------------------+
+; tbest[31..25] ; Input  ; Info     ; Stuck at GND           ;
+; tbest[23..0]  ; Input  ; Info     ; Stuck at GND           ;
+; tbest[24]     ; Input  ; Info     ; Stuck at VCC           ;
+; tnew          ; Output ; Info     ; Explicitly unconnected ;
++---------------+--------+----------+------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "sphere_reg:firstsph"      ;
++--------------------+-------+----------+--------------+
+; Port               ; Type  ; Severity ; Details      ;
++--------------------+-------+----------+--------------+
+; sphere_clk         ; Input ; Info     ; Stuck at GND ;
+; nextcol            ; Input ; Info     ; Stuck at VCC ;
+; nextpos[2]         ; Input ; Info     ; Stuck at GND ;
+; nextpos[1][31..17] ; Input ; Info     ; Stuck at GND ;
+; nextpos[1][15..0]  ; Input ; Info     ; Stuck at GND ;
+; nextpos[1][16]     ; Input ; Info     ; Stuck at VCC ;
+; nextpos[0]         ; Input ; Info     ; Stuck at GND ;
++--------------------+-------+----------+--------------+
 
 
 +-----------------------------------------------------+
@@ -259,11 +534,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 Patches 0.01we SJ Web Edition
-    Info: Processing started: Mon Apr 16 23:49:26 2018
+    Info: Processing started: Tue Apr 17 14:12:49 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final_project -c final_project_top
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file lut.sv
+    Info (12023): Found entity 1: ray_lut
+Info (12021): Found 2 design units, including 2 entities, in source file ang_lut.sv
+    Info (12023): Found entity 1: y_ang_lut
+    Info (12023): Found entity 2: x_ang_lut
 Info (12021): Found 1 design units, including 1 entities, in source file ps2_mouse_controller.sv
-    Info (12023): Found entity 1: ps2_mouse_controller
+    Info (12023): Found entity 1: ps2m
 Info (12021): Found 1 design units, including 1 entities, in source file vga_clk.v
     Info (12023): Found entity 1: vga_clk
 Info (12021): Found 1 design units, including 1 entities, in source file vga_controller.sv
@@ -282,19 +562,48 @@ Info (12021): Found 1 design units, including 1 entities, in source file frame_b
     Info (12023): Found entity 1: frame_buffer
 Info (12021): Found 1 design units, including 1 entities, in source file collision_detection.sv
     Info (12023): Found entity 1: collision_detection
+Info (12021): Found 1 design units, including 1 entities, in source file sphere_reg.sv
+    Info (12023): Found entity 1: sphere_reg
+Info (12021): Found 1 design units, including 1 entities, in source file writeupdate.sv
+    Info (12023): Found entity 1: increment_write
+Info (12021): Found 1 design units, including 1 entities, in source file color_mapper.sv
+    Info (12023): Found entity 1: color_mapper
+Warning (10236): Verilog HDL Implicit Net warning at lut.sv(47): created implicit net for "rayx_fix"
+Warning (10236): Verilog HDL Implicit Net warning at lut.sv(48): created implicit net for "rayy_fix"
+Warning (10236): Verilog HDL Implicit Net warning at ang_lut.sv(133): created implicit net for "dPhi"
 Warning (10236): Verilog HDL Implicit Net warning at frame_buffer.sv(14): created implicit net for "Write_Index"
 Warning (10236): Verilog HDL Implicit Net warning at frame_buffer.sv(15): created implicit net for "Read_Index"
 Warning (10236): Verilog HDL Implicit Net warning at collision_detection.sv(21): created implicit net for "radsq"
+Critical Warning (10846): Verilog HDL Instantiation warning at final_top_level.sv(36): instance has no name
 Info (12127): Elaborating entity "final_top_level" for the top level hierarchy
-Warning (10034): Output port "VGA_R" at final_top_level.sv(4) has no driver
-Warning (10034): Output port "VGA_G" at final_top_level.sv(4) has no driver
-Warning (10034): Output port "VGA_B" at final_top_level.sv(4) has no driver
-Warning (10034): Output port "VGA_CLK" at final_top_level.sv(5) has no driver
-Warning (10034): Output port "VGA_SYNC_N" at final_top_level.sv(5) has no driver
-Warning (10034): Output port "VGA_BLANK_N" at final_top_level.sv(5) has no driver
-Warning (10034): Output port "VGA_VS" at final_top_level.sv(5) has no driver
-Warning (10034): Output port "VGA_HS" at final_top_level.sv(6) has no driver
-Warning (12158): Entity "final_top_level" contains only dangling pins
+Warning (10858): Verilog HDL warning at final_top_level.sv(16): object State used but never assigned
+Warning (10036): Verilog HDL or VHDL warning at final_top_level.sv(16): object "State_n" assigned a value but never read
+Warning (10030): Net "VGA_CLK" at final_top_level.sv(11) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "State.Reset" at final_top_level.sv(16) has no driver or initial value, using a default initial value '0'
+Info (12128): Elaborating entity "sphere_reg" for hierarchy "sphere_reg:firstsph"
+Info (12128): Elaborating entity "color_mapper" for hierarchy "color_mapper:colmap"
+Info (12128): Elaborating entity "collision_detection" for hierarchy "collision_detection:cd"
+Warning (10230): Verilog HDL assignment warning at collision_detection.sv(21): truncated value with size 32 to match size of target (1)
+Info (12128): Elaborating entity "dot_product_scale" for hierarchy "collision_detection:cd|dot_product_scale:vdxc"
+Info (12128): Elaborating entity "mult_real" for hierarchy "collision_detection:cd|dot_product_scale:vdxc|mult_real:x"
+Info (12128): Elaborating entity "sqrt_real" for hierarchy "collision_detection:cd|sqrt_real:rbsqrt"
+Info (12128): Elaborating entity "VGA_controller" for hierarchy "VGA_controller:vga"
+Info (12128): Elaborating entity "frame_buffer" for hierarchy "frame_buffer:fb"
+Warning (10230): Verilog HDL assignment warning at frame_buffer.sv(14): truncated value with size 10 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at frame_buffer.sv(15): truncated value with size 10 to match size of target (1)
+Info (12128): Elaborating entity "increment_write" for hierarchy "increment_write:comb_4"
+Info (12128): Elaborating entity "y_ang_lut" for hierarchy "y_ang_lut:yang"
+Warning (10230): Verilog HDL assignment warning at ang_lut.sv(13): truncated value with size 32 to match size of target (16)
+Info (12128): Elaborating entity "x_ang_lut" for hierarchy "x_ang_lut:xang"
+Warning (10036): Verilog HDL or VHDL warning at ang_lut.sv(133): object "dPhi" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at ang_lut.sv(133): truncated value with size 32 to match size of target (1)
+Warning (12158): Entity "x_ang_lut" contains only dangling pins
+Info (12128): Elaborating entity "ray_lut" for hierarchy "ray_lut:rl"
+Warning (10230): Verilog HDL assignment warning at lut.sv(43): truncated value with size 49 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at lut.sv(44): truncated value with size 49 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at lut.sv(45): truncated value with size 49 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at lut.sv(47): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at lut.sv(48): truncated value with size 32 to match size of target (1)
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_R[0]" is stuck at GND
     Warning (13410): Pin "VGA_R[1]" is stuck at GND
@@ -325,6 +634,8 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_BLANK_N" is stuck at GND
     Warning (13410): Pin "VGA_VS" is stuck at GND
     Warning (13410): Pin "VGA_HS" is stuck at GND
+Info (17049): 174 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/altera/15.0/Programs/385FinalProject/output_files/final_project_top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 5 input pin(s) that do not drive logic
@@ -336,10 +647,16 @@ Warning (21074): Design contains 5 input pin(s) that do not drive logic
 Info (21057): Implemented 34 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 29 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 48 warnings
-    Info: Peak virtual memory: 729 megabytes
-    Info: Processing ended: Mon Apr 16 23:49:40 2018
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:25
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 59 warnings
+    Info: Peak virtual memory: 2329 megabytes
+    Info: Processing ended: Tue Apr 17 14:31:28 2018
+    Info: Elapsed time: 00:18:39
+    Info: Total CPU time (on all processors): 00:17:20
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/altera/15.0/Programs/385FinalProject/output_files/final_project_top.map.smsg.
 
 

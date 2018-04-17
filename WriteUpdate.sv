@@ -1,5 +1,5 @@
 module increment_write(
-	input logic clk,
+	input logic Clk, Reset,
 	output logic [9:0] WriteX, WriteY
 );
 
@@ -8,10 +8,12 @@ logic [9:0] WriteXN, WriteYN;
 parameter [9:0] H_TOTAL = 10'd640;
 parameter [9:0] V_TOTAL = 10'd480;
 
-assign WriteX = h_counter_in;
-assign WriteY = v_counter_in
+logic [9:0] h_counter_in, v_counter_in, h_counter, v_counter;
 
- always_ff @ (posedge VGA_CLK)
+assign WriteX = h_counter_in;
+assign WriteY = v_counter_in;
+
+ always_ff @ (posedge Clk)
  begin
 	  if (Reset)
 	  begin
