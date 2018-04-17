@@ -89,7 +89,7 @@ module normalize_vector (
 	input vector a,
 	output vector b
 );
-	float Mag, Cross, InvMag;
+	fixed_real Mag, Cross, InvMag;
 	dot_product_scale dps0(.a(a),.b(a),.c(Cross));
 	fake_sqrt fs0(.a(Cross),.b(Mag));
 	fake_div fd0(.a(1 << 16),.b(Mag),.c(InvMag));
@@ -105,7 +105,7 @@ module sqrt_real (
 	output fixed_real c
 );
 	logic [15:0] res;
-	float [15:0] sub, sum, try;
+	fixed_real [15:0] sub, sum, try;
 	
 	
 	assign sum[15] = (a[31])?((~a)+1):(a);

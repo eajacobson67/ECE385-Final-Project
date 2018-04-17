@@ -1,5 +1,5 @@
 module ps2_mouse_controller(
-	input logic Clk, Reset,
+	input logic Clk, Reset
 	input wire PS2_MSCLK,
 	input wire PS2_MSDAT,
 	output logic Mouse_LeftClick, Mouse_RightClick,
@@ -14,7 +14,7 @@ module ps2_mouse_controller(
 	
 	logic Mouse_LeftClick_n, Mouse_RightClick_n;
 	logic [15:0] Mouse_dx_n, Mouse_dy_n;
-	logic Data_Out_n;
+	logic Data_Out_n
 
 	logic [8:0] X_Move, Y_Move;
 	logic [15:0] X_Move_Signed, Y_Move_Signed;
