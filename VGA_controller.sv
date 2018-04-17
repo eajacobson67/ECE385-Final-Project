@@ -73,17 +73,17 @@ module  VGA_controller (input              Clk,         // 50 MHz clock
     always_comb
     begin
         // horizontal and vertical counter
-        h_counter_in = h_counter + 10'd1;
-        v_counter_in = v_counter;
-        if(h_counter + 10'd1 == H_TOTAL)
-        begin
-            h_counter_in = 10'd0;
-            if(v_counter + 10'd1 == V_TOTAL)
-                v_counter_in = 10'd0;
-            else
-                v_counter_in = v_counter + 10'd1;
-        end
-        // Horizontal sync pulse is 96 pixels long at pixels 656-752
+		  h_counter_in = h_counter + 10'd1;
+		  v_counter_in = v_counter;
+		  if(h_counter + 10'd1 == H_TOTAL)
+		  begin
+				h_counter_in = 10'd0;
+				if(v_counter + 10'd1 == V_TOTAL)
+					 v_counter_in = 10'd0;
+				else
+					 v_counter_in = v_counter + 10'd1;
+		  end
+		  // Horizontal sync pulse is 96 pixels long at pixels 656-752
         // (Signal is registered to ensure clean output waveform)
         VGA_HS_in = 1'b1;
         if(h_counter_in >= 10'd656 && h_counter_in < 10'd752)

@@ -7,7 +7,7 @@ module sphere_reg (
 	input color nextcol,
 	input vector nextpos,
 	output vector currentpos,
-	output color currentcol,
+	output color currentcol
 );
 
 always_ff @ (posedge sphere_clk) begin
