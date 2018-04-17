@@ -333,7 +333,7 @@ fixed_real cosTheta, sinTheta, sinPhi, cosPhi,x,y,z;
 sin_lut s0(.*,.angle(theta),.sin(sinTheta));
 sin_lut s1(.*,.angle(phi),.sin(sinPhi));
 cos_lut c0(.*,.angle(theta),.cos(cosTheta));
-cos_lut c1(.*,.angle(phi),.cos(cosTheta));
+cos_lut c1(.*,.angle(phi),.cos(cosPhi));
 
 mult_real m0(.a(sinTheta),.b(sinPhi),.c(y));
 mult_real m1(.a(sinTheta),.b(cosPhi),.c(z));
