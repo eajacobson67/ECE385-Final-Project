@@ -17,6 +17,7 @@ assign in = in_0[8:0];
 assign out_signed = (WriteY >= 10'd240)?out:(~out)+16'd0;
 assign dPhi = {16'd0,out_signed,32'd0};
 
+//javascript used to generate the long bits
 /*
 function tobin(a){
 	var str = Math.round(a);
@@ -138,6 +139,7 @@ assign in = in_0[8:0];
 assign out_signed = (WriteX > 10'd320)?(~out)+16'd0:out;
 assign dTheta = {16'd0,out_signed,32'd0};
 
+//javascript used to generate the long bits
 /*
 function tobin(a){
 	var str = Math.round(a);
