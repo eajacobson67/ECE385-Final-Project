@@ -1,0 +1,717 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/ece_385/final_project/simulation/modelsim
+vadd_vector
+Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+Z2 DXx4 work 14 vector_sv_unit 0 22 UAGD7eO:?_KbI7M`c`?521
+Z3 V`JN@9S9cnhjKRR_L]QIcM3
+r1
+!s85 0
+31
+!i10b 1
+!s100 UG=T29UClRRJCH?JaL^861
+I==5l`a@YVOEA`VkH6@7h00
+Z4 !s105 vector_sv_unit
+S1
+R0
+Z5 w1524013648
+Z6 8D:/ece_385/final_project/vector.sv
+Z7 FD:/ece_385/final_project/vector.sv
+L0 13
+Z8 OV;L;10.3d;59
+Z9 !s108 1524015708.247000
+Z10 !s107 D:/ece_385/final_project/vector.sv|
+Z11 !s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ece_385/final_project|D:/ece_385/final_project/vector.sv|
+!i113 1
+Z12 o-sv -work work
+Z13 !s92 -sv -work work +incdir+D:/ece_385/final_project
+Xang_lut_sv_unit
+R1
+VFj3K6g=S0=]8K?_VRX6IT2
+r1
+!s85 0
+31
+!i10b 1
+!s100 g[@YU_>D6X[MEX;oG5Ek]1
+IFj3K6g=S0=]8K?_VRX6IT2
+!i103 1
+S1
+R0
+Z14 w1524015670
+Z15 8D:/ece_385/final_project/ang_lut.sv
+Z16 FD:/ece_385/final_project/ang_lut.sv
+L0 1
+R8
+Z17 !s108 1524015708.156000
+Z18 !s107 D:/ece_385/final_project/ang_lut.sv|
+Z19 !s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ece_385/final_project|D:/ece_385/final_project/ang_lut.sv|
+!i113 1
+R12
+R13
+vcollision_detection
+R1
+DXx4 work 27 collision_detection_sv_unit 0 22 =44Fm6Uj^8U[`TgP6;lhk0
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 FA>P:ZBS5IT4N^VoIJdVP0
+IUfLoIQaIS;fh;X0^3cDKZ2
+!s105 collision_detection_sv_unit
+S1
+R0
+R5
+Z20 8D:/ece_385/final_project/collision_detection.sv
+Z21 FD:/ece_385/final_project/collision_detection.sv
+L0 5
+R8
+Z22 !s108 1524015708.480000
+Z23 !s107 D:/ece_385/final_project/collision_detection.sv|
+Z24 !s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ece_385/final_project|D:/ece_385/final_project/collision_detection.sv|
+!i113 1
+R12
+R13
+Xcollision_detection_sv_unit
+R1
+V=44Fm6Uj^8U[`TgP6;lhk0
+r1
+!s85 0
+31
+!i10b 1
+!s100 9nOcaP:CR_VmCcb=Eb15;1
+I=44Fm6Uj^8U[`TgP6;lhk0
+!i103 1
+S1
+R0
+R5
+R20
+R21
+L0 1
+R8
+R22
+R23
+R24
+!i113 1
+R12
+R13
+vcolor_mapper
+R1
+DXx4 work 20 color_mapper_sv_unit 0 22 gS1Bn;k;33^JQBR@V=6kd3
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 d?jX3f;Uhd95PejP<LO@D2
+IiL_XfBj9l?cIO?KGXY1me1
+!s105 color_mapper_sv_unit
+S1
+R0
+R5
+Z25 8D:/ece_385/final_project/color_mapper.sv
+Z26 FD:/ece_385/final_project/color_mapper.sv
+L0 4
+R8
+Z27 !s108 1524015708.654000
+Z28 !s107 D:/ece_385/final_project/color_mapper.sv|
+Z29 !s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ece_385/final_project|D:/ece_385/final_project/color_mapper.sv|
+!i113 1
+R12
+R13
+Xcolor_mapper_sv_unit
+R1
+VgS1Bn;k;33^JQBR@V=6kd3
+r1
+!s85 0
+31
+!i10b 1
+!s100 N9H=KZUL5F0imd]5;IZnc3
+IgS1Bn;k;33^JQBR@V=6kd3
+!i103 1
+S1
+R0
+R5
+R25
+R26
+L0 2
+R8
+R27
+R28
+R29
+!i113 1
+R12
+R13
+vcos_lut
+R1
+Z30 DXx4 work 11 lut_sv_unit 0 22 2h_ac^5>i5n5STOlmX2Kg3
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 RcL_m0fnJ`9EDUS8K>XFQ2
+IUIEOJMeZY<fQO>DaQHHDR3
+Z31 !s105 lut_sv_unit
+S1
+R0
+Z32 w1524014941
+Z33 8D:/ece_385/final_project/lut.sv
+Z34 FD:/ece_385/final_project/lut.sv
+L0 187
+R8
+Z35 !s108 1524015707.887000
+Z36 !s107 D:/ece_385/final_project/lut.sv|
+Z37 !s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ece_385/final_project|D:/ece_385/final_project/lut.sv|
+!i113 1
+R12
+R13
+vdiv_real
+R1
+R2
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 ]N0zB_FMVAgMALWRTmBH@0
+IfQRddRaehSaQ33Tj7^okg2
+R4
+S1
+R0
+R5
+R6
+R7
+L0 54
+R8
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vdot_product_scale
+R1
+R2
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 l03Zzcg08OaFZ]e^?gI2R2
+I:X@jdaBVd[AGb7^R9L5>F0
+R4
+S1
+R0
+R5
+R6
+R7
+L0 69
+R8
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vfinal_top_level
+R1
+DXx4 work 23 final_top_level_sv_unit 0 22 >_^M96Cg=Q5]o;k9oH]To0
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 c>:5JCB1G]OeGXN7`RNA_0
+I=:FF;^>fDU=QB^2?cXH9h1
+!s105 final_top_level_sv_unit
+S1
+R0
+Z38 w1524015626
+Z39 8D:/ece_385/final_project/final_top_level.sv
+Z40 FD:/ece_385/final_project/final_top_level.sv
+L0 5
+R8
+Z41 !s108 1524015708.747000
+Z42 !s107 D:/ece_385/final_project/final_top_level.sv|
+Z43 !s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ece_385/final_project|D:/ece_385/final_project/final_top_level.sv|
+!i113 1
+R12
+R13
+Xfinal_top_level_sv_unit
+R1
+V>_^M96Cg=Q5]o;k9oH]To0
+r1
+!s85 0
+31
+!i10b 1
+!s100 FM`WZjKGnoibZaEVYH0@d2
+I>_^M96Cg=Q5]o;k9oH]To0
+!i103 1
+S1
+R0
+R38
+R39
+R40
+L0 1
+R8
+R41
+R42
+R43
+!i113 1
+R12
+R13
+vframe_buffer
+R1
+DXx4 work 20 frame_buffer_sv_unit 0 22 :=HMUDb;N@?FZ3G8[mYW>1
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 l^ZCc0TXVicC:MC<nhWf;2
+ILKFZl3=c;b;_0mNWak4Ac2
+!s105 frame_buffer_sv_unit
+S1
+R0
+Z44 w1524015560
+Z45 8D:/ece_385/final_project/frame_buffer.sv
+Z46 FD:/ece_385/final_project/frame_buffer.sv
+L0 5
+R8
+Z47 !s108 1524015708.388000
+Z48 !s107 D:/ece_385/final_project/frame_buffer.sv|
+Z49 !s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ece_385/final_project|D:/ece_385/final_project/frame_buffer.sv|
+!i113 1
+R12
+R13
+Xframe_buffer_sv_unit
+R1
+V:=HMUDb;N@?FZ3G8[mYW>1
+r1
+!s85 0
+31
+!i10b 1
+!s100 2UJURAWSb48CIm83BkUMR2
+I:=HMUDb;N@?FZ3G8[mYW>1
+!i103 1
+S1
+R0
+R44
+R45
+R46
+L0 1
+R8
+R47
+R48
+R49
+!i113 1
+R12
+R13
+vincrement_write
+R1
+!s110 1524015708
+!i10b 1
+!s100 NgQOKE@oozzjEAIgM8OEh2
+I]Y9`oJAHYL[3<<KN;Vc;:1
+R3
+!s105 WriteUpdate_sv_unit
+S1
+R0
+R5
+8D:/ece_385/final_project/WriteUpdate.sv
+FD:/ece_385/final_project/WriteUpdate.sv
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1524015708.074000
+!s107 D:/ece_385/final_project/WriteUpdate.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ece_385/final_project|D:/ece_385/final_project/WriteUpdate.sv|
+!i113 1
+R12
+R13
+Xlut_sv_unit
+R1
+V2h_ac^5>i5n5STOlmX2Kg3
+r1
+!s85 0
+31
+!i10b 1
+!s100 2b7cVbDjhe2GH0^QJdZzV0
+I2h_ac^5>i5n5STOlmX2Kg3
+!i103 1
+S1
+R0
+R32
+R33
+R34
+L0 1
+R8
+R35
+R36
+R37
+!i113 1
+R12
+R13
+vmult_real
+R1
+R2
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 MEg=TO8FLS::oK_kCi[dC1
+IRRk^jXeTT;Fj2GknXF7672
+R4
+S1
+R0
+R5
+R6
+R7
+Z50 L0 40
+R8
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vnormalize_vector
+R1
+R2
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 <7Dkg[Df8X9Z?mIfLKbA>3
+Iz_?J7?OjdRSk:9TfljzB80
+R4
+S1
+R0
+R5
+R6
+R7
+L0 88
+R8
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vray_lut
+R1
+R30
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 Xk7Y7zkf>5NLVARROaD;=1
+I]@7TTG3@Q]zQ2fO2aNnH_0
+R31
+S1
+R0
+R32
+R33
+R34
+L0 333
+R8
+R35
+R36
+R37
+!i113 1
+R12
+R13
+vsin_lut
+R1
+R30
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 FBX7ja]7aj<<CWmQB94[90
+I^IEGGNCJ4]_UMmQ<Cg`1e3
+R31
+S1
+R0
+R32
+R33
+R34
+L0 38
+R8
+R35
+R36
+R37
+!i113 1
+R12
+R13
+vsphere_reg
+R1
+DXx4 work 18 sphere_reg_sv_unit 0 22 RG0MQUO4@9B@CI3he^[OU1
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 KLb5_6Vo5S:oJ@1Ao2fMW2
+IUj60mOEPfkNz:UH]jFeP^1
+!s105 sphere_reg_sv_unit
+S1
+R0
+R5
+Z51 8D:/ece_385/final_project/sphere_reg.sv
+Z52 FD:/ece_385/final_project/sphere_reg.sv
+L0 5
+R8
+Z53 !s108 1524015708.562000
+Z54 !s107 D:/ece_385/final_project/sphere_reg.sv|
+Z55 !s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ece_385/final_project|D:/ece_385/final_project/sphere_reg.sv|
+!i113 1
+R12
+R13
+Xsphere_reg_sv_unit
+R1
+VRG0MQUO4@9B@CI3he^[OU1
+r1
+!s85 0
+31
+!i10b 1
+!s100 l;f7l`<XRz;a?`^;S1z:^2
+IRG0MQUO4@9B@CI3he^[OU1
+!i103 1
+S1
+R0
+R5
+R51
+R52
+L0 1
+R8
+R53
+R54
+R55
+!i113 1
+R12
+R13
+vsqrt_real
+R1
+R2
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 k^zzdKbb44gKD;]@nIjKf1
+IoUeUGX?f9LfHbMDMB<ZRN2
+R4
+S1
+R0
+R5
+R6
+R7
+L0 103
+R8
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vsub_vector
+R1
+R2
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 [MGL9ZM;zlJ=?@TR4X5gn0
+Id9WB0^kf]JoX?LX@eSXOd0
+R4
+S1
+R0
+R5
+R6
+R7
+L0 25
+R8
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vtestbench
+R1
+!s110 1524015709
+!i10b 1
+!s100 ekeT<gm84?X<7YYB54IB@0
+IYzU9G`IPR7eHm<>84RODI0
+R3
+!s105 testbench_sv_unit
+S1
+R0
+R5
+8D:/ece_385/final_project/output_files/testbench.sv
+FD:/ece_385/final_project/output_files/testbench.sv
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1524015709.839000
+!s107 D:/ece_385/final_project/output_files/testbench.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ece_385/final_project/output_files|D:/ece_385/final_project/output_files/testbench.sv|
+!i113 1
+R12
+!s92 -sv -work work +incdir+D:/ece_385/final_project/output_files
+Xvector_sv_unit
+R1
+VUAGD7eO:?_KbI7M`c`?521
+r1
+!s85 0
+31
+!i10b 1
+!s100 ERKQjbaPCezWQdD9MdGgf1
+IUAGD7eO:?_KbI7M`c`?521
+!i103 1
+S1
+R0
+R5
+R6
+R7
+L0 1
+R8
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vvga_clk
+Z56 !s110 1524015707
+!i10b 1
+!s100 OGlLO8;N^^k^>BA7[_bgn1
+I7PDiVeeDkXj^S0;d3MS>V1
+R3
+R0
+w1522216485
+8D:/ece_385/final_project/vga_clk.v
+FD:/ece_385/final_project/vga_clk.v
+R50
+R8
+r1
+!s85 0
+31
+!s108 1524015706.692000
+!s107 D:/ece_385/final_project/vga_clk.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/ece_385/final_project|D:/ece_385/final_project/vga_clk.v|
+!i113 1
+Z57 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+D:/ece_385/final_project
+vvga_clk_altpll1
+R56
+!i10b 1
+!s100 jNL7Y`9[GfCbB67;62]iW0
+Inb8^JLF]k0`BaWA7bL5XV1
+R3
+R0
+w1524015687
+8D:/ece_385/final_project/db/vga_clk_altpll1.v
+FD:/ece_385/final_project/db/vga_clk_altpll1.v
+L0 30
+R8
+r1
+!s85 0
+31
+!s108 1524015707.813000
+!s107 D:/ece_385/final_project/db/vga_clk_altpll1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/ece_385/final_project/db|D:/ece_385/final_project/db/vga_clk_altpll1.v|
+!i113 1
+R57
+!s92 -vlog01compat -work work +incdir+D:/ece_385/final_project/db
+vVGA_controller
+R1
+R56
+!i10b 1
+!s100 n;JbA8<`^T5Dd48Uo<46W2
+I`^]BT6YlGgT6=gAEE^EJ71
+R3
+!s105 VGA_controller_sv_unit
+S1
+R0
+R5
+8D:/ece_385/final_project/VGA_controller.sv
+FD:/ece_385/final_project/VGA_controller.sv
+L0 26
+R8
+r1
+!s85 0
+31
+!s108 1524015707.981000
+!s107 D:/ece_385/final_project/VGA_controller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ece_385/final_project|D:/ece_385/final_project/VGA_controller.sv|
+!i113 1
+R12
+R13
+n@v@g@a_controller
+vx_ang_lut
+R1
+Z58 DXx4 work 15 ang_lut_sv_unit 0 22 Fj3K6g=S0=]8K?_VRX6IT2
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 [mR;JgH@:IkAV`84:OONI1
+I`fh2okSb4=<e:>Kz;j[g20
+Z59 !s105 ang_lut_sv_unit
+S1
+R0
+R14
+R15
+R16
+L0 126
+R8
+R17
+R18
+R19
+!i113 1
+R12
+R13
+vy_ang_lut
+R1
+R58
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 MQE`;U;Hc7GWeE`]S@Cee1
+Ic0dRizIfOf?>jAcVj?kS@0
+R59
+S1
+R0
+R14
+R15
+R16
+L0 5
+R8
+R17
+R18
+R19
+!i113 1
+R12
+R13

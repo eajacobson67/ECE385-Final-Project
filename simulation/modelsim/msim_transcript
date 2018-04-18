@@ -1,0 +1,486 @@
+# Reading C:/altera/15.0/modelsim_ase/tcl/vsim/pref.tcl
+# do final_project_top_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim PE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim# Model Technology ModelSim PE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vl# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:41:46 on Apr 17,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/vga_clk.v 
+# -- Compiling module vga_clk
+# 
+# Top level modules:
+# 	vga_clk
+# End time: 20:41:46 on Apr 17,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/ece_385/final_project/db {D:/ece_385/f# -- Compiling module vga_clk
+# 
+# Top level modules:
+# 	vga_clk
+# End time: 20:41:47 on Apr 17,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+# vlog -vlog01compat -work work +incdir+D:/ece_385/final_project/db {D:/ece_385/final_project/db/vga_clk_altpll1.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:41:47 on Apr 17,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/ece_385/final_project/db" D:/ece_385/final_project/db/vga_clk_altpll1.v 
+# -- Compiling module vga_clk_altpll1
+# 
+# Top level modules:
+# 	vga_clk_altpll1
+# End time: 20:41:47 on Apr 17,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/lut.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:41:47 on Apr 17,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/lut.sv 
+# -- Compiling package lut_sv_unit
+# -- Compiling module sin_lut
+# -- Compiling module cos_lut
+# -- Compiling module ray_lut
+# 
+# Top level modules:
+# 	ray_lut
+# End time: 20:41:47 on Apr 17,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/VGA_controller.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:41:47 on Apr 17,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/VGA_controller.sv 
+# -- Compiling module VGA_controller
+# 
+# Top level modules:
+# 	VGA_controller
+# End time: 20:41:48 on Apr 17,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/WriteUpdate.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:41:48 on Apr 17,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/WriteUpdate.sv 
+# -- Compiling module increment_write
+# 
+# Top level modules:
+# 	increment_write
+# End time: 20:41:48 on Apr 17,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/ang_lut.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:41:48 on Apr 17,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/ang_lut.sv 
+# -- Compiling package ang_lut_sv_unit
+# -- Compiling module y_ang_lut
+# -- Compiling module x_ang_lut
+# 
+# Top level modules:
+# 	y_ang_lut
+# 	x_ang_lut
+# End time: 20:41:48 on Apr 17,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/vector.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:41:48 on Apr 17,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/vector.sv 
+# -- Compiling package vector_sv_unit
+# -- Compiling module add_vector
+# -- Compiling module sub_vector
+# -- Compiling module mult_real
+# -- Compiling module div_real
+# -- Compiling module dot_product_scale
+# -- Compiling module normalize_vector
+# -- Compiling module sqrt_real
+# 
+# Top level modules:
+# 	add_vector
+# 	sub_vector
+# 	div_real
+# 	normalize_vector
+# 	sqrt_real
+# End time: 20:41:48 on Apr 17,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/frame_buffer.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:41:48 on Apr 17,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/frame_buffer.sv 
+# -- Compiling package frame_buffer_sv_unit
+# -- Compiling module frame_buffer
+# 
+# Top level modules:
+# 	frame_buffer
+# End time: 20:41:48 on Apr 17,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/collision_detection.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:41:48 on Apr 17,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/collision_detection.sv 
+# -- Compiling package collision_detection_sv_unit
+# -- Compiling module collision_detection
+# ** Warning: D:/ece_385/final_project/collision_detection.sv(24): (vlog-2182) 'bsqr' might be read before written in always_comb or always @* block.
+# 
+# 
+# Top level modules:
+# 	collision_detection
+# End time: 20:41:48 on Apr 17,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/sphere_reg.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:41:48 on Apr 17,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/sphere_reg.sv 
+# -- Compiling package sphere_reg_sv_unit
+# -- Compiling module sphere_reg
+# 
+# Top level modules:
+# 	sphere_reg
+# End time: 20:41:48 on Apr 17,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/color_mapper.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:41:48 on Apr 17,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/color_mapper.sv 
+# -- Compiling package color_mapper_sv_unit
+# -- Compiling module color_mapper
+# 
+# Top level modules:
+# 	color_mapper
+# End time: 20:41:48 on Apr 17,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/final_top_level.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:41:48 on Apr 17,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/final_top_level.sv 
+# ** Warning: (vlog-6) -- Waiting for lock by "Nick@GL# End time: 20:41:48 on Apr 17,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+# 
+# vlog -sv -w# -- Compiling package final_top_level_sv_unit
+# -- Compiling module final_top_level
+# 
+# Top level modules:
+# 	final_top_level
+# End time: 20:41:49 on Apr 17,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+# 
+# vlog -sv -work work +incdir+D:/ece_385/final_project/output_files {D:/ece_385/final_project/output_files/testbench.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:41:49 on Apr 17,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project/output_files" D:/ece_385/final_project/output_files/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 20:41:49 on Apr 17,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
+# vsim -gui "+altera" -l msim_transcript -do "final_project_top_run_msim_rtl_verilog.do" 
+# Start time: 20:41:49 on Apr 17,2018
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.final_top_level_sv_unit
+# Loading work.final_top_level
+# Loading work.sphere_reg_sv_unit
+# Loading work.sphere_reg
+# Loading work.color_mapper_sv_unit
+# Loading work.color_mapper
+# Loading work.collision_detection_sv_unit
+# Loading work.collision_detection
+# Loading work.vector_sv_unit
+# Loading work.dot_product_scale
+# Loading work.mult_real
+# Loading work.sqrt_real
+# Loading work.VGA_controller
+# Loading work.frame_buffer_sv_unit
+# Loading work.frame_buffer
+# Loading work.increment_write
+# Loading work.ang_lut_sv_unit
+# Loading work.y_ang_lut
+# Loading work.x_ang_lut
+# Loading work.lut_sv_unit
+# Loading work.ray_lut
+# Loading work.sin_lut
+# Loading work.cos_lut
+# Loading work.vga_clk
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+# ** Warning: (vsim-3015) D:/ece_385/final_project/final_top_level.sv(23): [PCDPC] - Port size (24) does not match connection size (192) for port 'nextcol'. The port definition is at: D:/ece_385/final_project/sphere_reg.sv(7).
+# 
+#         Region: /testbench/ftl/firstsph
+# ** Warning: (vsim-3015) D:/ece_385/final_project/final_top_level.sv(23): [PCDPC] - Port size (24) does not match connection size (96) for port 'currentcol'. The port definition is at: D:/ece_385/final_project/sphere_reg.sv(10).
+# 
+#         Region: /testbench/ftl/firstsph
+# ** Warning: (vsim-3015) D:/ece_385/final_project/final_top_level.sv(26): [PCDPC] - Port size (24) does not match connection size (96) for port 'colin'. The port definition is at: D:/ece_385/final_project/color_mapper.sv(7).
+# 
+#         Region: /testbench/ftl/colmap
+# ** Warning: (vsim-3015) D:/ece_385/final_project/final_top_level.sv(26): [PCDPC] - Port size (24) does not match connection size (96) for port 'col'. The port definition is at: D:/ece_385/final_project/color_mapper.sv(8).
+# 
+#         Region: /testbench/ftl/colmap
+# ** Warning: (vsim-3015) D:/ece_385/# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 30 ms
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 60000  Instance: testbench.ftl.vga_clk_instance.altpll_component.cycloneiii_pll.pll3
+add wave -position insertpoint  \
+sim:/testbench/ftl/CLOCK_50 \
+sim:/testbench/ftl/KEY \
+sim:/testbench/ftl/VGA_R \
+sim:/testbench/ftl/VGA_G \
+sim:/testbench/ftl/VGA_B \
+sim:/testbench/ftl/VGA_CLK \
+sim:/testbench/ftl/VGA_SYNC_N \
+sim:/testbench/ftl/VGA_BLANK_N \
+sim:/testbench/ftl/VGA_VS \
+sim:/testbench/ftl/VGA_HS \
+sim:/testbench/ftl/State \
+sim:/testbench/ftl/State_n \
+sim:/testbench/ftl/reset_clk \
+sim:/testbench/ftl/collide \
+sim:/testbench/ftl/sphere1pos \
+sim:/testbench/ftl/lookray \
+sim:/testbench/ftl/sphere1col \
+sim:/testbench/ftl/c# End time: 21:06:04 on Apr 17,2018, Elapsed time: 0:24:15
+# Errors: 0, Warnings: 7
+WriteX \
+sim:/testbench/ftl/WriteY \
+sim:/testbench/ftl/dPhi \
+sim:/testbench/ftl/dTheta \
+sim:/testbench/ftl/WritePixel
+add wave -position insertpoint  \
+sim:/testbench/ftl/cd/sphere \
+sim:/testbench/ftl/cd/ray \
+sim:/testbench/ftl/cd/tbest \
+sim:/testbench/ftl/cd/tnew \
+sim:/testbench/ftl/cd/collide \
+sim:/testbench/ftl/cd/v \
+sim:/testbench/ftl/cd/bsqr \
+sim:/testbench/ftl/cd/cdot \
+sim:/testbench/ftl/cd/vsqr \
+sim:/testbench/ftl/cd/disc \
+sim:/testbench/ftl/cd/sqrt \
+sim:/testbench/ftl/cd/rad \
+sim:/testbench/ftl/cd/radsq
+add wave -position insertpoint  \
+sim:/testbench/ftl/yang/Clk \
+sim:/testbench/ftl/yang/WriteY \
+sim:/testbench/ftl/yang/dPhi \
+sim:/testbench/ftl/yang/in_0 \
+sim:/testbench/ftl/yang/in \
+sim:/testbench/ftl/yang/out \
+sim:/testbench/ftl/yang/out_signed
+add wave -position insertpoint  \
+sim:/testbench/ftl/xang/Clk \
+sim:/testbench/ftl/xang/WriteX \
+sim:/testbench/ftl/xang/dTheta \
+sim:/testbench/ftl/xang/in_0 \
+sim:/testbench/ftl/xang/in \
+sim:/testbench/ftl/xang/out \
+sim:/testbench/ftl/xang/out_signed
+add wave -position insertpoint  \
+sim:/testbench/ftl/rl/Clk \
+sim:/testbench/ftl/rl/theta \
+sim:/testbench/ftl/rl/phi \
+sim:/testbench/ftl/rl/ray \
+sim:/testbench/ftl/rl/cosTheta \
+sim:/testbench/ftl/rl/sinTheta \
+sim:/testbench/ftl/rl/sinPhi \
+sim:/testbench/ftl/rl/cosPhi \
+sim:/testbench/ftl/rl/x \
+sim:/testbench/ftl/rl/y \
+sim:/testbench/ftl/rl/z
+restart
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.final_top_level_sv_unit
+# Loading work.final_top_level
+# Loading work.sphere_reg_sv_unit
+# Loading work.sphere_reg
+# Loading work.color_mapper_sv_unit
+# Loading work.color_mapper
+# Loading work.collision_detection_sv_unit
+# Loading work.collision_detection
+# Loading work.vector_sv_unit
+# Loading work.dot_product_scale
+# Loading work.mult_real
+# Loading work.sqrt_real
+# Loading work.VGA_controller
+# Loading work.frame_buffer_sv_unit
+# Loading work.frame_buffer
+# Loading work.increment_write
+# Loading work.ang_lut_sv_unit
+# Loading work.y_ang_lut
+# Loading work.x_ang_lut
+# Loading work.lut_sv_unit
+# Loading work.ray_lut
+# Loading work.sin_lut
+# Loading work.cos_lut
+# ** Warning: (vsim-3015) D:/ece_385/final_project/final_top_level.sv(23): [PCDPC] - Port size (24) does not match connection size (192) for port 'nextcol'. The port definition is at: D:/ece_385/final_project/sphere_reg.sv(7).
+# 
+#         Region: /testbench/ftl/firstsph
+# ** Warning: (vsim-3015) D:/ece_385/final_project/final_top_level.sv(23): [PCDPC] - Port size (24) does not match connection size (96) for port 'currentcol'. The port definition is at: D:/ece_385/final_project/sphere_reg.sv(10).
+# 
+#         Region: /testbench/ftl/firstsph
+# ** Warning: (vsim-3015) D:/ece_385/final_project/final_top_level.sv(26): [PCDPC] - Port size (24) does not match connection size (96) for port 'colin'. The port definition is at: D:/ece_385/final_project/color_mapper.sv(7).
+# 
+#         Region: /testbench/ftl/colmap
+# ** Warning: (vsim-3015) D:/ece_385/final_project/final_top_level.sv(26): [PCDPC] - Port size (24) does not match connection size (96) for port 'col'. The port definition is at: D:/ece_385/final_project/color_mapper.sv(8).
+# 
+#         Region: /testbench/ftl/colmap
+# ** Warning: (vsim-3015) D:/ece_385/final_project/final_top_level.sv(32): [PCDPC] - Port size (24) does not match connection size (96) for port 'WriteColor'. The port definition is at: D:/ece_385/final_project/frame_buffer.sv(8).
+# 
+#         Region: /testbench/ftl/fb
+run 20us
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 60000  Instance: testbench.ftl.vga_clk_instance.altpll_component.cycloneiii_pll.pll3
+add wave -position insertpoint  \
+sim:/testbench/CLOCK_50
+add wave -position insertpoint  \
+sim:/testbench/KEY
+add wave -position insertpoint  \
+sim:/testbench/VGA_R
+add wave -position insertpoint  \
+sim:/testbench/VGA_G
+add wave -position insertpoint  \
+sim:/testbench/VGA_B
+add wave -position insertpoint  \
+sim:/testbench/ftl/yang/WriteY
+add wave -position insertpoint  \
+sim:/testbench/ftl/xang/WriteX
+add wave -position insertpoint  \
+sim:/testbench/ftl/xang/out
+add wave -position insertpoint  \
+sim:/testbench/ftl/yang/out
+add wave -position insertpoint  \
+sim:/testbench/ftl/rl/x
+add wave -position insertpoint  \
+sim:/testbench/ftl/rl/y
+add wave -position insertpoint  \
+sim:/testbench/ftl/rl/z
+add wave -position insertpoint  \
+sim:/testbench/ftl/State
+add wave -position insertpoint  \
+sim:/testbench/ftl/collide
+restart
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.final_top_level_sv_unit
+# Loading work.final_top_level
+# Loading work.sphere_reg_sv_unit
+# Loading work.sphere_reg
+# Loading work.color_mapper_sv_unit
+# Loading work.color_mapper
+# Loading work.collision_detection_sv_unit
+# Loading work.collision_detection
+# Loading work.vector_sv_unit
+# Loading work.dot_product_scale
+# Loading work.mult_real
+# Loading work.sqrt_real
+# Loading work.VGA_controller
+# Loading work.frame_buffer_sv_unit
+# Loading work.frame_buffer
+# Loading work.increment_write
+# Loading work.ang_lut_sv_unit
+# Loading work.y_ang_lut
+# Loading work.x_ang_lut
+# Loading work.lut_sv_unit
+# Loading work.ray_lut
+# Loading work.sin_lut
+# Loading work.cos_lut
+# ** Warning: (vsim-3015) D:/ece_385/final_project/final_top_level.sv(23): [PCDPC] - Port size (24) does not match connection size (192) for port 'nextcol'. The port definition is at: D:/ece_385/final_project/sphere_reg.sv(7).
+# 
+#         Region: /testbench/ftl/firstsph
+# ** Warning: (vsim-3015) D:/ece_385/final_project/final_top_level.sv(23): [PCDPC] - Port size (24) does not match connection size (96) for port 'currentcol'. The port definition is at: D:/ece_385/final_project/sphere_reg.sv(10).
+# 
+#         Region: /testbench/ftl/firstsph
+# ** Warning: (vsim-3015) D:/ece_385/final_project/final_top_level.sv(26): [PCDPC] - Port size (24) does not match connection size (96) for port 'colin'. The port definition is at: D:/ece_385/final_project/color_mapper.sv(7).
+# 
+#         Region: /testbench/ftl/colmap
+# ** Warning: (vsim-3015) D:/ece_385/final_project/final_top_level.sv(26): [PCDPC] - Port size (24) does not match connection size (96) for port 'col'. The port definition is at: D:/ece_385/final_project/color_mapper.sv(8).
+# 
+#         Region: /testbench/ftl/colmap
+# ** Warning: (vsim-3015) D:/ece_385/final_project/final_top_level.sv(32): [PCDPC] - Port size (24) does not match connection size (96) for port 'WriteColor'. The port definition is at: D:/ece_385/final_project/frame_buffer.sv(8).
+# 
+#         Region: /testbench/ftl/fb
+run 1ms
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 60000  Instance: testbench.ftl.vga_clk_instance.altpll_component.cycloneiii_pll.pll3
+run 20ms
+add wave -position insertpoint  \
+sim:/testbench/ftl/cd/sphere \
+sim:/testbench/ftl/cd/ray \
+sim:/testbench/ftl/cd/tbest \
+sim:/testbench/ftl/cd/tnew \
+sim:/testbench/ftl/cd/collide \
+sim:/testbench/ftl/cd/v \
+sim:/testbench/ftl/cd/bsqr \
+sim:/testbench/ftl/cd/cdot \
+sim:/testbench/ftl/cd/vsqr \
+sim:/testbench/ftl/cd/disc \
+sim:/testbench/ftl/cd/sqrt \
+sim:/testbench/ftl/cd/rad \
+sim:/testbench/ftl/cd/radsq
+restart
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.final_top_level_sv_unit
+# Loading work.final_top_level
+# Loading work.sphere_reg_sv_unit
+# Loading work.sphere_reg
+# Loading work.color_mapper_sv_unit
+# Loading work.color_mapper
+# Loading work.collision_detection_sv_unit
+# Loading work.collision_detection
+# Loading work.vector_sv_unit
+# Loading work.dot_product_scale
+# Loading work.mult_real
+# Loading work.sqrt_real
+# Loading work.VGA_controller
+# Loading work.frame_buffer_sv_unit
+# Loading work.frame_buffer
+# Loading work.increment_write
+# Loading work.ang_lut_sv_unit
+# Loading work.y_ang_lut
+# Loading work.x_ang_lut
+# Loading work.lut_sv_unit
+# Loading work.ray_lut
+# Loading work.sin_lut
+# Loading work.cos_lut
+# ** Warning: (vsim-3015) D:/ece_385/final_project/final_top_level.sv(23): [PCDPC] - Port size (24) does not match connection size (192) for port 'nextcol'. The port definition is at: D:/ece_385/final_project/sphere_reg.sv(7).
+# 
+#         Region: /testbench/ftl/firstsph
+# ** Warning: (vsim-3015) D:/ece_385/final_project/final_top_level.sv(23): [PCDPC] - Port size (24) does not match connection size (96) for port 'currentcol'. The port definition is at: D:/ece_385/final_project/sphere_reg.sv(10).
+# 
+#         Region: /testbench/ftl/firstsph
+# ** Warning: (vsim-3015) D:/ece_385/final_project/final_top_level.sv(26): [PCDPC] - Port size (24) does not match connection size (96) for port 'colin'. The port definition is at: D:/ece_385/final_project/color_mapper.sv(7).
+# 
+#         Region: /testbench/ftl/colmap
+# ** Warning: (vsim-3015) D:/ece_385/final_project/final_top_level.sv(26): [PCDPC] - Port size (24) does not match connection size (96) for port 'col'. The port definition is at: D:/ece_385/final_project/color_mapper.sv(8).
+# 
+#         Region: /testbench/ftl/colmap
+# ** Warning: (vsim-3015) D:/ece_385/final_project/final_top_level.sv(32): [PCDPC] - Port size (24) does not match connection size (96) for port 'WriteColor'. The port definition is at: D:/ece_385/final_project/frame_buffer.sv(8).
+# 
+#         Region: /testbench/ftl/fb
+run 7ms
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 60000  Instance: testbench.ftl.vga_clk_instance.altpll_component.cycloneiii_pll.pll3
+# End time: 21:30:04 on Apr 17,2018, Elapsed time: 0:48:16
+# Errors: 0, Warnings: 20

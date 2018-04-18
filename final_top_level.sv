@@ -13,30 +13,30 @@ enum logic [7:0] {
 	Reset,
 	Sphere1} State, State_n;
 
-logic reset_clk, collide;
+logic reset_clk, collide, WritePixel;
 vector sphere1pos, lookray;
 color sphere1col, colorout;
 logic [9:0] DrawX, DrawY, WriteX, WriteY;
 
-logic [15:0] dPhi, dTheta;
+fixed_real dPhi, dTheta;
 
 sphere_reg firstsph(.sphere_clk(reset_clk), .nextcol({{8{8'hff}}, {8{8'hff}}, {8{8'hff}}}), .nextpos({{32'b0}, {32'h01300000}, {32'b0}}),
 	.currentpos(sphere1pos), .currentcol(sphere1col));
 	
-color_mapper colmap(.is_ball(collide), .DrawX(DrawX), .DrawY(DrawY), .colin(sphere1col), .col(colorout));
+color_mapper colmap(.is_ball(collide), .DrawX(WriteX), .DrawY(WriteY), .colin(sphere1col), .col(colorout));
 
 collision_detection cd(.sphere(sphere1pos), .ray(lookray), .tbest(32'h8FFF0000), .tnew(), .collide(collide));
 
 VGA_controller vga(.Clk(VGA_CLK), .Reset(~KEY[0]), .*);
 
-frame_buffer fb(.Clk(CLOCK_50), .Write(reset_clk), .*, .WriteColor(colorout), .ReadColor({{VGA_B}, {VGA_G}, {VGA_R}}));
+frame_buffer fb(.Clk(CLOCK_50), .Write(WritePixel), .*, .WriteColor(colorout), .ReadColor({VGA_B, VGA_G, VGA_R}));
 
 increment_write iw(.Clk(reset_clk), .Reset(~KEY[0]), .*);
 
-y_ang_lut yang(.Clk(CLOCK_50), .Y(WriteY), .dPhi(dPhi));
-x_ang_lut xang(.Clk(CLOCK_50), .X(WriteX), .dTheta(dTheta));
+y_ang_lut yang(.Clk(CLOCK_50), .WriteY(WriteY), .dPhi(dPhi));
+x_ang_lut xang(.Clk(CLOCK_50), .WriteX(WriteX), .dTheta(dTheta));
 
-ray_lut rl(.Clk(CLOCK_50), .theta((16'd90 + dTheta) << 16), .phi((16'd90 + dPhi) << 16), .ray(lookray));
+ray_lut rl(.Clk(CLOCK_50), .theta((32'd90 << 16) + dTheta), .phi((32'd90 << 16) + dPhi), .ray(lookray));
 
 vga_clk vga_clk_instance(.inclk0(CLOCK_50), .c0(VGA_CLK));
 
@@ -54,12 +54,14 @@ end
 
 always_comb begin
 State_n = State;
+WritePixel = 0;
 case (State)
 	Reset: begin
 		State_n = Sphere1;
 	end
 	Sphere1: begin
 		State_n = Reset;
+		WritePixel = 1;
 	end
 endcase
 

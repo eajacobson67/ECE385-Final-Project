@@ -1,16 +1,21 @@
+typedef logic [2:0] [31:0] vector;
+typedef logic [31:0] fixed_real;
+typedef logic [2:0] [31:0] color;
+
 module y_ang_lut (
 	input logic Clk,
-	input logic [9:0] Y,
-	output logic [15:0] dPhi
+	input logic [9:0] WriteY,
+	output fixed_real dPhi
 );
 
 logic [9:0] in_0;
 logic [8:0] in;
-logic [15:0] out;
+logic [15:0] out, out_signed;
 
-assign in_0 = (Y >= 10'd240)?Y-10'd240:10'd240-Y;
+assign in_0 = (WriteY >= 10'd240)?WriteY-10'd240:10'd240-WriteY;
 assign in = in_0[8:0];
-assign dPhi = (Y > 10'd240)?(~out)+1:out;
+assign out_signed = (WriteY >= 10'd240)?out:(~out)+1;
+assign dPhi = {out_signed,16'b0};
 
 /*
 function tobin(a){
@@ -120,17 +125,18 @@ endmodule
 
 module x_ang_lut (
 	input logic Clk,
-	input logic [9:0] X,
-	input logic [15:0] dTheta
+	input logic [9:0] WriteX,
+	output fixed_real dTheta
 );
 
 logic [9:0] in_0;
 logic [8:0] in;
-logic [15:0] out;
+logic [15:0] out, out_signed;
 
-assign in_0 = (X >= 10'd320)?X-10'd320:10'd320-X;
+assign in_0 = (WriteX >= 10'd320)?WriteX-10'd320:10'd320-WriteX;
 assign in = in_0[8:0];
-assign dPhi = (X > 10'd320)?(~out)+1:out;
+assign out_signed = (WriteX > 10'd320)?(~out)+1:out;
+assign dTheta = {out_signed,16'b0};
 
 /*
 function tobin(a){

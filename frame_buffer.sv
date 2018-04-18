@@ -16,7 +16,7 @@ module frame_buffer (
 	
 	assign ReadColor = buffer[Read_Index];
 
-	always_ff @ (posedge Clk) begin
+	always_ff @ (negedge Clk) begin
 		if(Write)
 			buffer[Write_Index] = WriteColor;
 	end
