@@ -1,6 +1,6 @@
-typedef logic [2:0] [31:0] vector;
-typedef logic [31:0] fixed_real;
-typedef logic [2:0] [31:0] color;
+typedef logic [2:0] [63:0] vector;
+typedef logic [63:0] fixed_real;
+typedef logic [2:0] [7:0] color;
 
 module y_ang_lut (
 	input logic Clk,
@@ -14,8 +14,8 @@ logic [15:0] out, out_signed;
 
 assign in_0 = (WriteY >= 10'd240)?WriteY-10'd240:10'd240-WriteY;
 assign in = in_0[8:0];
-assign out_signed = (WriteY >= 10'd240)?out:(~out)+1;
-assign dPhi = {out_signed,16'b0};
+assign out_signed = (WriteY >= 10'd240)?out:(~out)+16'd0;
+assign dPhi = {16'd0,out_signed,32'd0};
 
 /*
 function tobin(a){
@@ -135,8 +135,8 @@ logic [15:0] out, out_signed;
 
 assign in_0 = (WriteX >= 10'd320)?WriteX-10'd320:10'd320-WriteX;
 assign in = in_0[8:0];
-assign out_signed = (WriteX > 10'd320)?(~out)+1:out;
-assign dTheta = {out_signed,16'b0};
+assign out_signed = (WriteX > 10'd320)?(~out)+16'd0:out;
+assign dTheta = {16'd0,out_signed,32'd0};
 
 /*
 function tobin(a){

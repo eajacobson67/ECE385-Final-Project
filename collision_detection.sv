@@ -1,5 +1,5 @@
-typedef logic [2:0] [31:0] vector;
-typedef logic [31:0] fixed_real;
+typedef logic [2:0] [63:0] vector;
+typedef logic [63:0] fixed_real;
 typedef logic [2:0] [7:0] color;
 
 module collision_detection (
@@ -16,8 +16,8 @@ mult_real vsqrmod(.a(v), .b(v), .c(vsqr)); // 1 mult
 sqrt_real rbsqrt(.a(disc), .c(sqrt));
 
 //radius of sphere: d'32 = b'10 0000
-fixed_real rad;
-assign rad = 32'h0200000;
+fixed_real rad, radsq;
+assign rad = 64'h0000002000000000;
 assign radsq = rad << 5;
 
 always_comb begin

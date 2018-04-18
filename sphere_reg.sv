@@ -1,5 +1,5 @@
-typedef logic [2:0] [31:0] vector;
-typedef logic [31:0] fixed_real;
+typedef logic [2:0] [63:0] vector;
+typedef logic [63:0] fixed_real;
 typedef logic [2:0] [7:0] color;
 
 module sphere_reg (

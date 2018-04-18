@@ -1,15 +1,15 @@
-typedef logic [2:0] [31:0] vector;
-typedef logic [31:0] fixed_real;
+typedef logic [2:0] [63:0] vector;
+typedef logic [63:0] fixed_real;
 typedef logic [2:0] [7:0] color;
 
 //javascript used to generate the long part
 /*
 function tobin(a){
-	var str = Math.round(a * Math.pow(2,14));
+	var str = Math.round(a * Math.pow(2,30));
 	if(str < 0){
 		var str1 = Math.abs(str).toString(2);
 		var q = "1";
-		for(var i = 0; i < 15-str1.length; i++){
+		for(var i = 0; i < 31-str1.length; i++){
 			q += "0";
 		}
 		q += str1;
@@ -17,16 +17,10 @@ function tobin(a){
 	} else {
 		return str.toString(2);
 	}
-<<<<<<< HEAD
-}89
-
-var out = "always_ff @ (negedge Clk) begin\ncase (in)\n";
-=======
 }
-var out = "always_ff @ (negedge clk) begin\ncase (in)\n";
->>>>>>> edff88383ceed9bb0db1ca36f2602495d629b131
+var out = "always_ff @ (negedge Clk) begin\ncase (in)\n";
 for(var i = 0; i <= 360; i++) {
-		out += "9'd" + (i) + ": out <= 16'b"+tobin(Math.sin(i*Math.PI/180))+";    ";  //use cos for cos
+		out += "9'd" + (i) + ": out <= 32'b"+tobin(Math.sin(i*Math.PI/180))+";    ";  //use cos for cos
 		if(!(i % 3)){
 			out += "\n";
 		}
@@ -46,14 +40,13 @@ logic [15:0] out;
 logic [14:0] out_fixed;
 
 
-assign angle_fixed = angle[31]?angle+(32'd360 << 16):angle;
+assign angle_fixed = angle[63]?angle+(64'd360 << 32):angle;
 
-assign in = angle_fixed[24:16];
-assign out_fixed = out[15]?(~out[14:0])+1:out[14:0];
-assign sin = {{15{out[15]}},out_fixed,2'b00};
+assign in = angle_fixed[40:32];
+assign out_fixed = out[15]?(~out[14:0])+15'd1:out[14:0];
+assign sin = {{31{out[15]}},out_fixed,18'd0};
 
-
-always_ff @ (posedge Clk) begin
+always_ff @ (negedge Clk) begin
 case (in)
 9'd0: out <= 16'b0;    
 9'd1: out <= 16'b100011110;    9'd2: out <= 16'b1000111100;    9'd3: out <= 16'b1101011001;    
@@ -175,10 +168,10 @@ case (in)
 9'd349: out <= 16'b1000110000110110;    9'd350: out <= 16'b1000101100011101;    9'd351: out <= 16'b1000101000000011;    
 9'd352: out <= 16'b1000100011101000;    9'd353: out <= 16'b1000011111001101;    9'd354: out <= 16'b1000011010110001;    
 9'd355: out <= 16'b1000010110010100;    9'd356: out <= 16'b1000010001110111;    9'd357: out <= 16'b1000001101011001;    
-9'd358: out <= 16'b1000001000111100;    9'd359: out <= 16'b1000000100011110;    9'd360: out <= 16'b0;
-default: out <= 16'b0;
+9'd358: out <= 16'b1000001000111100;    9'd359: out <= 16'b1000000100011110;    9'd360: out <= 16'b0;    
 endcase
 end
+
 
 endmodule
 
@@ -195,13 +188,13 @@ logic [15:0] out;
 logic [14:0] out_fixed;
 
 
-assign angle_fixed = angle[31]?angle+(32'd360 << 16):angle;
+assign angle_fixed = angle[63]?angle+(64'd360 << 32):angle;
 
-assign in = angle_fixed[24:16];
-assign out_fixed = out[15]?(~out[14:0])+1:out[14:0];
-assign cos = {{15{out[15]}},out_fixed,2'b00};
+assign in = angle_fixed[40:32];
+assign out_fixed = out[15]?(~out[14:0])+15'd1:out[14:0];
+assign cos = {{31{out[15]}},out_fixed,18'd0};
 
-always_ff @ (posedge Clk) begin
+always_ff @ (negedge Clk) begin
 case (in)
 9'd0: out <= 16'b100000000000000;    
 9'd1: out <= 16'b11111111111110;    9'd2: out <= 16'b11111111110110;    9'd3: out <= 16'b11111111101010;    
@@ -323,8 +316,7 @@ case (in)
 9'd349: out <= 16'b11111011010011;    9'd350: out <= 16'b11111100000111;    9'd351: out <= 16'b11111100110110;    
 9'd352: out <= 16'b11111101100001;    9'd353: out <= 16'b11111110000110;    9'd354: out <= 16'b11111110100110;    
 9'd355: out <= 16'b11111111000010;    9'd356: out <= 16'b11111111011000;    9'd357: out <= 16'b11111111101010;    
-9'd358: out <= 16'b11111111110110;    9'd359: out <= 16'b11111111111110;    9'd360: out <= 16'b100000000000000;
-default: out <= 16'b0;
+9'd358: out <= 16'b11111111110110;    9'd359: out <= 16'b11111111111110;    9'd360: out <= 16'b100000000000000;    
 endcase
 end
 

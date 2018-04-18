@@ -1,6 +1,6 @@
-typedef logic [2:0] [31:0] vector;
-typedef logic [31:0] fixed_real;
-typedef logic [2:0] [31:0] color;
+typedef logic [2:0] [63:0] vector;
+typedef logic [63:0] fixed_real;
+typedef logic [2:0] [7:0] color;
 
 module final_top_level (
 	input logic CLOCK_50,
@@ -20,12 +20,12 @@ logic [9:0] DrawX, DrawY, WriteX, WriteY;
 
 fixed_real dPhi, dTheta;
 
-sphere_reg firstsph(.sphere_clk(reset_clk), .nextcol({{8{8'hff}}, {8{8'hff}}, {8{8'hff}}}), .nextpos({{32'b0}, {32'h01300000}, {32'b0}}),
+sphere_reg firstsph(.sphere_clk(reset_clk), .nextcol({{8{8'hff}}, {8{8'hff}}, {8{8'hff}}}), .nextpos({64'd0, 64'd304 << 32, 64'd0}),
 	.currentpos(sphere1pos), .currentcol(sphere1col));
 	
 color_mapper colmap(.is_ball(collide), .DrawX(WriteX), .DrawY(WriteY), .colin(sphere1col), .col(colorout));
 
-collision_detection cd(.sphere(sphere1pos), .ray(lookray), .tbest(32'h8FFF0000), .tnew(), .collide(collide));
+collision_detection cd(.sphere(sphere1pos), .ray(lookray), .tbest(64'h8FFFFFFF00000000), .tnew(), .collide(collide));
 
 VGA_controller vga(.Clk(VGA_CLK), .Reset(~KEY[0]), .*);
 
@@ -36,7 +36,7 @@ increment_write iw(.Clk(reset_clk), .Reset(~KEY[0]), .*);
 y_ang_lut yang(.Clk(CLOCK_50), .WriteY(WriteY), .dPhi(dPhi));
 x_ang_lut xang(.Clk(CLOCK_50), .WriteX(WriteX), .dTheta(dTheta));
 
-ray_lut rl(.Clk(CLOCK_50), .theta((32'd90 << 16) + dTheta), .phi((32'd90 << 16) + dPhi), .ray(lookray));
+ray_lut rl(.Clk(CLOCK_50), .theta((64'd90 << 32) + dTheta), .phi((64'd90 << 32) + dPhi), .ray(lookray));
 
 vga_clk vga_clk_instance(.inclk0(CLOCK_50), .c0(VGA_CLK));
 

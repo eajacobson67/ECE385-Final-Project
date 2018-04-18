@@ -1,5 +1,5 @@
 Analysis & Synthesis report for final_project_top
-Tue Apr 17 20:41:28 2018
+Tue Apr 17 22:48:35 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -13,24 +13,33 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |final_top_level|State
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: VGA_controller:vga
- 14. Parameter Settings for User Entity Instance: increment_write:iw
- 15. Parameter Settings for User Entity Instance: vga_clk:vga_clk_instance|altpll:altpll_component
- 16. altpll Parameter Settings by Entity Instance
- 17. Port Connectivity Checks: "frame_buffer:fb"
- 18. Port Connectivity Checks: "collision_detection:cd|dot_product_scale:cc"
- 19. Port Connectivity Checks: "collision_detection:cd|dot_product_scale:vdxc"
- 20. Port Connectivity Checks: "collision_detection:cd"
- 21. Port Connectivity Checks: "sphere_reg:firstsph"
- 22. Post-Synthesis Netlist Statistics for Top Partition
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
- 25. Analysis & Synthesis Suppressed Messages
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis DSP Block Usage Summary
+ 10. State Machine - |final_top_level|State
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Registers Packed Into Inferred Megafunctions
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_8ch1:auto_generated
+ 17. Parameter Settings for User Entity Instance: VGA_controller:vga
+ 18. Parameter Settings for User Entity Instance: increment_write:iw
+ 19. Parameter Settings for User Entity Instance: vga_clk:vga_clk_instance|altpll:altpll_component
+ 20. Parameter Settings for Inferred Entity Instance: frame_buffer:fb|altsyncram:buffer_rtl_0
+ 21. Parameter Settings for Inferred Entity Instance: ray_lut:rl|mult_real:m0|lpm_mult:Mult0
+ 22. Parameter Settings for Inferred Entity Instance: collision_detection:cd|dot_product_scale:vdxc|mult_real:y|lpm_mult:Mult0
+ 23. Parameter Settings for Inferred Entity Instance: collision_detection:cd|mult_real:vsqrmod|lpm_mult:Mult0
+ 24. altpll Parameter Settings by Entity Instance
+ 25. altsyncram Parameter Settings by Entity Instance
+ 26. lpm_mult Parameter Settings by Entity Instance
+ 27. Port Connectivity Checks: "collision_detection:cd|dot_product_scale:cc"
+ 28. Port Connectivity Checks: "collision_detection:cd|dot_product_scale:vdxc"
+ 29. Port Connectivity Checks: "collision_detection:cd"
+ 30. Port Connectivity Checks: "sphere_reg:firstsph"
+ 31. Post-Synthesis Netlist Statistics for Top Partition
+ 32. Elapsed Time Per Partition
+ 33. Analysis & Synthesis Messages
+ 34. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -57,19 +66,19 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 17 20:41:28 2018      ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr 17 22:48:35 2018      ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                      ; final_project_top                          ;
 ; Top-level Entity Name              ; final_top_level                            ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 60                                         ;
-;     Total combinational functions  ; 60                                         ;
-;     Dedicated logic registers      ; 23                                         ;
-; Total registers                    ; 23                                         ;
+; Total logic elements               ; 2,329                                      ;
+;     Total combinational functions  ; 2,328                                      ;
+;     Dedicated logic registers      ; 93                                         ;
+; Total registers                    ; 93                                         ;
 ; Total pins                         ; 34                                         ;
 ; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0                                          ;
-; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total memory bits                  ; 7,372,800                                  ;
+; Embedded Multiplier 9-bit elements ; 68                                         ;
 ; Total PLLs                         ; 1                                          ;
 +------------------------------------+--------------------------------------------+
 
@@ -172,78 +181,147 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                     ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
-; lut.sv                           ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/lut.sv                                  ;         ;
-; ang_lut.sv                       ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/ang_lut.sv                              ;         ;
-; vga_clk.v                        ; yes             ; User Wizard-Generated File   ; D:/ece_385/final_project/vga_clk.v                               ;         ;
-; VGA_controller.sv                ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/VGA_controller.sv                       ;         ;
-; final_top_level.sv               ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/final_top_level.sv                      ;         ;
-; vector.sv                        ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/vector.sv                               ;         ;
-; frame_buffer.sv                  ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/frame_buffer.sv                         ;         ;
-; collision_detection.sv           ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/collision_detection.sv                  ;         ;
-; sphere_reg.sv                    ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/sphere_reg.sv                           ;         ;
-; WriteUpdate.sv                   ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/WriteUpdate.sv                          ;         ;
-; color_mapper.sv                  ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/color_mapper.sv                         ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altpll.tdf        ;         ;
-; aglobal150.inc                   ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/aglobal150.inc    ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/stratix_pll.inc   ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/stratixii_pll.inc ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/cycloneii_pll.inc ;         ;
-; db/vga_clk_altpll1.v             ; yes             ; Auto-Generated Megafunction  ; D:/ece_385/final_project/db/vga_clk_altpll1.v                    ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                             ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                         ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
+; lut.sv                           ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/lut.sv                                      ;         ;
+; ang_lut.sv                       ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/ang_lut.sv                                  ;         ;
+; vga_clk.v                        ; yes             ; User Wizard-Generated File   ; D:/ece_385/final_project/vga_clk.v                                   ;         ;
+; VGA_controller.sv                ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/VGA_controller.sv                           ;         ;
+; final_top_level.sv               ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/final_top_level.sv                          ;         ;
+; vector.sv                        ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/vector.sv                                   ;         ;
+; frame_buffer.sv                  ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/frame_buffer.sv                             ;         ;
+; collision_detection.sv           ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/collision_detection.sv                      ;         ;
+; sphere_reg.sv                    ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/sphere_reg.sv                               ;         ;
+; WriteUpdate.sv                   ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/WriteUpdate.sv                              ;         ;
+; color_mapper.sv                  ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/color_mapper.sv                             ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altpll.tdf            ;         ;
+; aglobal150.inc                   ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/aglobal150.inc        ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
+; db/vga_clk_altpll1.v             ; yes             ; Auto-Generated Megafunction  ; D:/ece_385/final_project/db/vga_clk_altpll1.v                        ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_8ch1.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/ece_385/final_project/db/altsyncram_8ch1.tdf                      ;         ;
+; db/decode_hua.tdf                ; yes             ; Auto-Generated Megafunction  ; D:/ece_385/final_project/db/decode_hua.tdf                           ;         ;
+; db/mux_fqb.tdf                   ; yes             ; Auto-Generated Megafunction  ; D:/ece_385/final_project/db/mux_fqb.tdf                              ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/lpm_mult.tdf          ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/lpm_add_sub.inc       ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/multcore.inc          ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/bypassff.inc          ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altshift.inc          ;         ;
+; db/mult_c6t.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/ece_385/final_project/db/mult_c6t.tdf                             ;         ;
+; db/mult_mit.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/ece_385/final_project/db/mult_mit.tdf                             ;         ;
+; db/mult_v7t.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/ece_385/final_project/db/mult_v7t.tdf                             ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                                    ;
-+---------------------------------------------+--------------------------------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                                            ;
-+---------------------------------------------+--------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 60                                                                                               ;
-;                                             ;                                                                                                  ;
-; Total combinational functions               ; 60                                                                                               ;
-; Logic element usage by number of LUT inputs ;                                                                                                  ;
-;     -- 4 input functions                    ; 24                                                                                               ;
-;     -- 3 input functions                    ; 6                                                                                                ;
-;     -- <=2 input functions                  ; 30                                                                                               ;
-;                                             ;                                                                                                  ;
-; Logic elements by mode                      ;                                                                                                  ;
-;     -- normal mode                          ; 42                                                                                               ;
-;     -- arithmetic mode                      ; 18                                                                                               ;
-;                                             ;                                                                                                  ;
-; Total registers                             ; 23                                                                                               ;
-;     -- Dedicated logic registers            ; 23                                                                                               ;
-;     -- I/O registers                        ; 0                                                                                                ;
-;                                             ;                                                                                                  ;
-; I/O pins                                    ; 34                                                                                               ;
-;                                             ;                                                                                                  ;
-; Embedded Multiplier 9-bit elements          ; 0                                                                                                ;
-;                                             ;                                                                                                  ;
-; Total PLLs                                  ; 1                                                                                                ;
-;     -- PLLs                                 ; 1                                                                                                ;
-;                                             ;                                                                                                  ;
-; Maximum fan-out node                        ; vga_clk:vga_clk_instance|altpll:altpll_component|vga_clk_altpll1:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 25                                                                                               ;
-; Total fan-out                               ; 262                                                                                              ;
-; Average fan-out                             ; 1.72                                                                                             ;
-+---------------------------------------------+--------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 2,329          ;
+;                                             ;                ;
+; Total combinational functions               ; 2328           ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 1253           ;
+;     -- 3 input functions                    ; 800            ;
+;     -- <=2 input functions                  ; 275            ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 1405           ;
+;     -- arithmetic mode                      ; 923            ;
+;                                             ;                ;
+; Total registers                             ; 93             ;
+;     -- Dedicated logic registers            ; 93             ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 34             ;
+; Total memory bits                           ; 7372800        ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 68             ;
+;                                             ;                ;
+; Total PLLs                                  ; 1              ;
+;     -- PLLs                                 ; 1              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 963            ;
+; Total fan-out                               ; 34989          ;
+; Average fan-out                             ; 10.08          ;
++---------------------------------------------+----------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                     ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                              ; Library Name ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------+--------------+
-; |final_top_level                          ; 60 (0)            ; 23 (0)       ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |final_top_level                                                                                 ; work         ;
-;    |VGA_controller:vga|                   ; 60 (60)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|VGA_controller:vga                                                              ; work         ;
-;    |vga_clk:vga_clk_instance|             ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|vga_clk:vga_clk_instance                                                        ; work         ;
-;       |altpll:altpll_component|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|vga_clk:vga_clk_instance|altpll:altpll_component                                ; work         ;
-;          |vga_clk_altpll1:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|vga_clk:vga_clk_instance|altpll:altpll_component|vga_clk_altpll1:auto_generated ; work         ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                      ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                               ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+--------------+
+; |final_top_level                          ; 2328 (1)          ; 93 (2)       ; 7372800     ; 68           ; 0       ; 34        ; 34   ; 0            ; |final_top_level                                                                                                  ; work         ;
+;    |VGA_controller:vga|                   ; 60 (60)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|VGA_controller:vga                                                                               ; work         ;
+;    |collision_detection:cd|               ; 748 (70)          ; 0 (0)        ; 0           ; 60           ; 0       ; 30        ; 0    ; 0            ; |final_top_level|collision_detection:cd                                                                           ; work         ;
+;       |dot_product_scale:vdxc|            ; 318 (0)           ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|collision_detection:cd|dot_product_scale:vdxc                                                    ; work         ;
+;          |mult_real:y|                    ; 318 (0)           ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|collision_detection:cd|dot_product_scale:vdxc|mult_real:y                                        ; work         ;
+;             |lpm_mult:Mult0|              ; 318 (0)           ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|collision_detection:cd|dot_product_scale:vdxc|mult_real:y|lpm_mult:Mult0                         ; work         ;
+;                |mult_mit:auto_generated|  ; 318 (318)         ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|collision_detection:cd|dot_product_scale:vdxc|mult_real:y|lpm_mult:Mult0|mult_mit:auto_generated ; work         ;
+;       |mult_real:vsqrmod|                 ; 360 (0)           ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|collision_detection:cd|mult_real:vsqrmod                                                         ; work         ;
+;          |lpm_mult:Mult0|                 ; 360 (0)           ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|collision_detection:cd|mult_real:vsqrmod|lpm_mult:Mult0                                          ; work         ;
+;             |mult_v7t:auto_generated|     ; 360 (360)         ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|collision_detection:cd|mult_real:vsqrmod|lpm_mult:Mult0|mult_v7t:auto_generated                  ; work         ;
+;    |frame_buffer:fb|                      ; 838 (44)          ; 6 (0)        ; 7372800     ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb                                                                                  ; work         ;
+;       |altsyncram:buffer_rtl_0|           ; 794 (0)           ; 6 (0)        ; 7372800     ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0                                                          ; work         ;
+;          |altsyncram_8ch1:auto_generated| ; 794 (0)           ; 6 (6)        ; 7372800     ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_8ch1:auto_generated                           ; work         ;
+;             |decode_hua:decode2|          ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_8ch1:auto_generated|decode_hua:decode2        ; work         ;
+;             |mux_fqb:mux3|                ; 747 (747)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_8ch1:auto_generated|mux_fqb:mux3              ; work         ;
+;    |increment_write:iw|                   ; 42 (42)           ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|increment_write:iw                                                                               ; work         ;
+;    |ray_lut:rl|                           ; 430 (0)           ; 30 (0)       ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl                                                                                       ; work         ;
+;       |mult_real:m0|                      ; 100 (0)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m0                                                                          ; work         ;
+;          |lpm_mult:Mult0|                 ; 100 (0)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m0|lpm_mult:Mult0                                                           ; work         ;
+;             |mult_c6t:auto_generated|     ; 100 (100)         ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m0|lpm_mult:Mult0|mult_c6t:auto_generated                                   ; work         ;
+;       |sin_lut:s0|                        ; 161 (161)         ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s0                                                                            ; work         ;
+;       |sin_lut:s1|                        ; 169 (169)         ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s1                                                                            ; work         ;
+;    |vga_clk:vga_clk_instance|             ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|vga_clk:vga_clk_instance                                                                         ; work         ;
+;       |altpll:altpll_component|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|vga_clk:vga_clk_instance|altpll:altpll_component                                                 ; work         ;
+;          |vga_clk_altpll1:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|vga_clk:vga_clk_instance|altpll:altpll_component|vga_clk_altpll1:auto_generated                  ; work         ;
+;    |x_ang_lut:xang|                       ; 109 (109)         ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|x_ang_lut:xang                                                                                   ; work         ;
+;    |y_ang_lut:yang|                       ; 100 (100)         ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|y_ang_lut:yang                                                                                   ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                         ;
++-----------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
+; Name                                                                              ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF  ;
++-----------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
+; frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_8ch1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 307200       ; 24           ; 307200       ; 24           ; 7372800 ; None ;
++-----------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 0           ;
+; Simple Multipliers (18-bit)           ; 34          ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 68          ;
+; Signed Embedded Multipliers           ; 1           ;
+; Unsigned Embedded Multipliers         ; 25          ;
+; Mixed Sign Embedded Multipliers       ; 8           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
 
 
 Encoding Type:  One-Hot
@@ -264,135 +342,226 @@ Encoding Type:  One-Hot
 +-----------------------------------------+----------------------------------------+
 ; x_ang_lut:xang|out[6..15]               ; Stuck at GND due to stuck port data_in ;
 ; y_ang_lut:yang|out[6..15]               ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[0][0]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[0][1]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[0][2]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[0][3]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[0][4]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[0][5]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[0][6]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[0][7]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[1][0]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[1][1]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[1][2]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[1][3]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[1][4]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[1][5]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[1][6]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[1][7]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[2][0]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[2][1]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[2][2]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[2][3]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[2][4]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[2][5]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[2][6]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentcol[2][7]    ; Lost fanout                            ;
-; ray_lut:rl|sin_lut:s1|out[0..15]        ; Lost fanout                            ;
+; sphere_reg:firstsph|currentcol[0][0]    ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentcol[0][1]    ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentcol[0][2]    ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentcol[0][3]    ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentcol[0][4]    ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentcol[0][5]    ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentcol[0][6]    ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentcol[0][7]    ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentcol[1][0]    ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentcol[1][1]    ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentcol[1][2]    ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentcol[1][3]    ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentcol[1][4]    ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentcol[1][5]    ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentcol[1][6]    ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentcol[1][7]    ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentcol[2][0]    ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentcol[2][1]    ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentcol[2][2]    ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentcol[2][3]    ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentcol[2][4]    ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentcol[2][5]    ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentcol[2][6]    ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentcol[2][7]    ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][0]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][1]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][2]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][3]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][4]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][5]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][6]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][7]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][8]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][9]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][10]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][11]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][12]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][13]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][14]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][15]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][16]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][17]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][18]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][19]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][20]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][21]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][22]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][23]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][24]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][25]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][26]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][27]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][28]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][29]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][30]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][31]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][32]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][33]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][34]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][35]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][36]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][37]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][38]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][39]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][40]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][41]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][42]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][43]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][44]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][45]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][46]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][47]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][48]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][49]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][50]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][51]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][52]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][53]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][54]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][55]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][56]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][57]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][58]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][59]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][60]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][61]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][62]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[0][63]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][0]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][1]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][2]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][3]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][4]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][5]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][6]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][7]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][8]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][9]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][10]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][11]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][12]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][13]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][14]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][15]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][16]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][17]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][18]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][19]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][20]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][21]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][22]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][23]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][24]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][25]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][26]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][27]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][28]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][29]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][30]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][31]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][32]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][33]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][34]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][35]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][36]   ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][37]   ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][38]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][39]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][40]   ; Stuck at VCC due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][41]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][42]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][43]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][44]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][45]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][46]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][47]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][48]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][49]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][50]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][51]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][52]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][53]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][54]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][55]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][56]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][57]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][58]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][59]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][60]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][61]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][62]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[1][63]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][0]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][1]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][2]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][3]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][4]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][5]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][6]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][7]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][8]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][9]    ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][10]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][11]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][12]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][13]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][14]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][15]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][16]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][17]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][18]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][19]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][20]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][21]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][22]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][23]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][24]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][25]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][26]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][27]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][28]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][29]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][30]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][31]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][32]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][33]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][34]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][35]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][36]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][37]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][38]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][39]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][40]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][41]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][42]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][43]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][44]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][45]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][46]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][47]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][48]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][49]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][50]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][51]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][52]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][53]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][54]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][55]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][56]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][57]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][58]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][59]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][60]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][61]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][62]   ; Stuck at GND due to stuck port data_in ;
+; sphere_reg:firstsph|currentpos[2][63]   ; Stuck at GND due to stuck port data_in ;
 ; ray_lut:rl|cos_lut:c0|out[0..15]        ; Lost fanout                            ;
-; ray_lut:rl|sin_lut:s0|out[0..15]        ; Lost fanout                            ;
 ; ray_lut:rl|cos_lut:c1|out[0..15]        ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][31]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][30]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][29]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][28]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][27]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][26]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][25]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][24]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][23]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][22]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][21]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][20]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][19]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][18]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][17]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][16]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][15]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][14]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][13]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][12]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][11]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][10]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][9]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][8]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][7]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][6]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][5]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][4]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][3]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][2]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][1]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[1][0]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][31]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][30]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][29]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][28]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][27]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][26]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][25]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][24]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][23]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][22]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][21]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][20]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][19]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][18]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][17]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][16]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][15]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][14]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][13]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][12]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][11]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][10]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][9]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][8]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][7]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][6]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][5]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][4]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][3]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][2]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][1]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[0][0]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][31]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][30]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][29]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][28]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][27]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][26]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][25]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][24]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][23]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][22]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][21]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][20]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][19]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][18]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][17]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][16]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][15]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][14]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][13]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][12]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][11]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][10]   ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][9]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][8]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][7]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][6]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][5]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][4]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][3]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][2]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][1]    ; Lost fanout                            ;
-; sphere_reg:firstsph|currentpos[2][0]    ; Lost fanout                            ;
-; reset_clk                               ; Lost fanout                            ;
-; x_ang_lut:xang|out[0..5]                ; Lost fanout                            ;
-; y_ang_lut:yang|out[0..5]                ; Lost fanout                            ;
-; increment_write:iw|h_counter[0..9]      ; Lost fanout                            ;
-; increment_write:iw|v_counter[0..9]      ; Lost fanout                            ;
+; ray_lut:rl|sin_lut:s0|out[15]           ; Stuck at GND due to stuck port data_in ;
+; ray_lut:rl|sin_lut:s1|out[15]           ; Stuck at GND due to stuck port data_in ;
 ; State~5                                 ; Lost fanout                            ;
 ; State~6                                 ; Lost fanout                            ;
 ; State~7                                 ; Lost fanout                            ;
@@ -400,23 +569,22 @@ Encoding Type:  One-Hot
 ; State~9                                 ; Lost fanout                            ;
 ; State~10                                ; Lost fanout                            ;
 ; State~11                                ; Lost fanout                            ;
-; State.Sphere1                           ; Lost fanout                            ;
-; Total Number of Removed Registers = 245 ;                                        ;
+; Total Number of Removed Registers = 277 ;                                        ;
 +-----------------------------------------+----------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                             ;
-+--------------------------------------+---------------------------+----------------------------------------------------------------------+
-; Register name                        ; Reason for Removal        ; Registers Removed due to This Register                               ;
-+--------------------------------------+---------------------------+----------------------------------------------------------------------+
-; y_ang_lut:yang|out[7]                ; Stuck at GND              ; y_ang_lut:yang|out[4], y_ang_lut:yang|out[3], y_ang_lut:yang|out[1], ;
-;                                      ; due to stuck port data_in ; increment_write:iw|v_counter[7], increment_write:iw|v_counter[6],    ;
-;                                      ;                           ; increment_write:iw|v_counter[5], increment_write:iw|v_counter[4]     ;
-; x_ang_lut:xang|out[7]                ; Stuck at GND              ; x_ang_lut:xang|out[4], x_ang_lut:xang|out[3], x_ang_lut:xang|out[1]  ;
-;                                      ; due to stuck port data_in ;                                                                      ;
-; sphere_reg:firstsph|currentcol[0][0] ; Lost Fanouts              ; reset_clk                                                            ;
-+--------------------------------------+---------------------------+----------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                               ;
++--------------------------------------+---------------------------+----------------------------------------+
+; Register name                        ; Reason for Removal        ; Registers Removed due to This Register ;
++--------------------------------------+---------------------------+----------------------------------------+
+; x_ang_lut:xang|out[6]                ; Stuck at GND              ; ray_lut:rl|sin_lut:s0|out[15]          ;
+;                                      ; due to stuck port data_in ;                                        ;
+; y_ang_lut:yang|out[6]                ; Stuck at GND              ; ray_lut:rl|sin_lut:s1|out[15]          ;
+;                                      ; due to stuck port data_in ;                                        ;
+; sphere_reg:firstsph|currentpos[0][0] ; Stuck at GND              ; ray_lut:rl|cos_lut:c0|out[15]          ;
+;                                      ; due to stuck port data_in ;                                        ;
++--------------------------------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -424,14 +592,23 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 23    ;
+; Total registers                              ; 93    ;
 ; Number of registers using Synchronous Clear  ; 4     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Synchronous Load   ; 6     ;
+; Number of registers using Asynchronous Clear ; 21    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 13    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                ;
++---------------------------------------+------------------------------+------+
+; Register Name                         ; Megafunction                 ; Type ;
++---------------------------------------+------------------------------+------+
+; frame_buffer:fb|ReadColor[0..2][0..7] ; frame_buffer:fb|buffer_rtl_0 ; RAM  ;
++---------------------------------------+------------------------------+------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -439,9 +616,21 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |final_top_level|VGA_controller:vga|h_counter[3]    ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |final_top_level|VGA_controller:vga|h_counter[2]    ;
+; 512:1              ; 6 bits    ; 2046 LEs      ; 564 LEs              ; 1482 LEs               ; Yes        ; |final_top_level|x_ang_lut:xang|out[2]              ;
+; 512:1              ; 6 bits    ; 2046 LEs      ; 462 LEs              ; 1584 LEs               ; Yes        ; |final_top_level|y_ang_lut:yang|out[0]              ;
 ; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |final_top_level|VGA_controller:vga|v_counter_in[9] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |final_top_level|increment_write:iw|WriteY[9]       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Source assignments for frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_8ch1:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------+
+; Assignment                      ; Value              ; From ; To                              ;
++---------------------------------+--------------------+------+---------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                               ;
++---------------------------------+--------------------+------+---------------------------------+
 
 
 +-----------------------------------------------------------------+
@@ -840,6 +1029,172 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: frame_buffer:fb|altsyncram:buffer_rtl_0 ;
++------------------------------------+----------------------+------------------------------+
+; Parameter Name                     ; Value                ; Type                         ;
++------------------------------------+----------------------+------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                      ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                   ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                 ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                 ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE               ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                      ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                      ;
+; WIDTH_A                            ; 24                   ; Untyped                      ;
+; WIDTHAD_A                          ; 19                   ; Untyped                      ;
+; NUMWORDS_A                         ; 307200               ; Untyped                      ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                      ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                      ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                      ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                      ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                      ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                      ;
+; WIDTH_B                            ; 24                   ; Untyped                      ;
+; WIDTHAD_B                          ; 19                   ; Untyped                      ;
+; NUMWORDS_B                         ; 307200               ; Untyped                      ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                      ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                      ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                      ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                      ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                      ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                      ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                      ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                      ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                      ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                      ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                      ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                      ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                      ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                      ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                      ;
+; BYTE_SIZE                          ; 8                    ; Untyped                      ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                      ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                      ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                      ;
+; INIT_FILE                          ; UNUSED               ; Untyped                      ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                      ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                      ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                      ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                      ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                      ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                      ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                      ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                      ;
+; CBXI_PARAMETER                     ; altsyncram_8ch1      ; Untyped                      ;
++------------------------------------+----------------------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ray_lut:rl|mult_real:m0|lpm_mult:Mult0 ;
++------------------------------------------------+--------------+-------------------------+
+; Parameter Name                                 ; Value        ; Type                    ;
++------------------------------------------------+--------------+-------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY              ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY            ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE            ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE          ;
+; LPM_WIDTHA                                     ; 34           ; Untyped                 ;
+; LPM_WIDTHB                                     ; 34           ; Untyped                 ;
+; LPM_WIDTHP                                     ; 68           ; Untyped                 ;
+; LPM_WIDTHR                                     ; 68           ; Untyped                 ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                 ;
+; LPM_REPRESENTATION                             ; SIGNED       ; Untyped                 ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                 ;
+; LATENCY                                        ; 0            ; Untyped                 ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                 ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped                 ;
+; USE_EAB                                        ; OFF          ; Untyped                 ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped                 ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                 ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                 ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K     ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                 ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                 ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                 ;
+; CBXI_PARAMETER                                 ; mult_c6t     ; Untyped                 ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                 ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                 ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                 ;
++------------------------------------------------+--------------+-------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: collision_detection:cd|dot_product_scale:vdxc|mult_real:y|lpm_mult:Mult0 ;
++------------------------------------------------+--------------+-----------------------------------------------------------+
+; Parameter Name                                 ; Value        ; Type                                                      ;
++------------------------------------------------+--------------+-----------------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                                                ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                                              ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                                              ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                                            ;
+; LPM_WIDTHA                                     ; 96           ; Untyped                                                   ;
+; LPM_WIDTHB                                     ; 41           ; Untyped                                                   ;
+; LPM_WIDTHP                                     ; 137          ; Untyped                                                   ;
+; LPM_WIDTHR                                     ; 137          ; Untyped                                                   ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                                                   ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped                                                   ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                                                   ;
+; LATENCY                                        ; 0            ; Untyped                                                   ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                                   ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped                                                   ;
+; USE_EAB                                        ; OFF          ; Untyped                                                   ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped                                                   ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                                   ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                                                   ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                                       ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                                   ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                                   ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                                   ;
+; CBXI_PARAMETER                                 ; mult_mit     ; Untyped                                                   ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                                   ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                                   ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                                   ;
++------------------------------------------------+--------------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: collision_detection:cd|mult_real:vsqrmod|lpm_mult:Mult0 ;
++------------------------------------------------+--------------+------------------------------------------+
+; Parameter Name                                 ; Value        ; Type                                     ;
++------------------------------------------------+--------------+------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                           ;
+; LPM_WIDTHA                                     ; 64           ; Untyped                                  ;
+; LPM_WIDTHB                                     ; 64           ; Untyped                                  ;
+; LPM_WIDTHP                                     ; 128          ; Untyped                                  ;
+; LPM_WIDTHR                                     ; 128          ; Untyped                                  ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                                  ;
+; LPM_REPRESENTATION                             ; SIGNED       ; Untyped                                  ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                                  ;
+; LATENCY                                        ; 0            ; Untyped                                  ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                  ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped                                  ;
+; USE_EAB                                        ; OFF          ; Untyped                                  ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped                                  ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                  ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                                  ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                      ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                  ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                  ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                  ;
+; CBXI_PARAMETER                                 ; mult_v7t     ; Untyped                                  ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                  ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                  ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                  ;
++------------------------------------------------+--------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------------------+
 ; altpll Parameter Settings by Entity Instance                                     ;
 +-------------------------------+--------------------------------------------------+
@@ -857,13 +1212,66 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+--------------------------------------------------+
 
 
-+---------------------------------------------+
-; Port Connectivity Checks: "frame_buffer:fb" ;
-+-------+-------+----------+------------------+
-; Port  ; Type  ; Severity ; Details          ;
-+-------+-------+----------+------------------+
-; Write ; Input ; Info     ; Stuck at GND     ;
-+-------+-------+----------+------------------+
++-------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                    ;
++-------------------------------------------+-----------------------------------------+
+; Name                                      ; Value                                   ;
++-------------------------------------------+-----------------------------------------+
+; Number of entity instances                ; 1                                       ;
+; Entity Instance                           ; frame_buffer:fb|altsyncram:buffer_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                               ;
+;     -- WIDTH_A                            ; 24                                      ;
+;     -- NUMWORDS_A                         ; 307200                                  ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                            ;
+;     -- WIDTH_B                            ; 24                                      ;
+;     -- NUMWORDS_B                         ; 307200                                  ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                ;
++-------------------------------------------+-----------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                                                   ;
++---------------------------------------+--------------------------------------------------------------------------+
+; Name                                  ; Value                                                                    ;
++---------------------------------------+--------------------------------------------------------------------------+
+; Number of entity instances            ; 3                                                                        ;
+; Entity Instance                       ; ray_lut:rl|mult_real:m0|lpm_mult:Mult0                                   ;
+;     -- LPM_WIDTHA                     ; 34                                                                       ;
+;     -- LPM_WIDTHB                     ; 34                                                                       ;
+;     -- LPM_WIDTHP                     ; 68                                                                       ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                                                   ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                                       ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                                                       ;
+;     -- USE_EAB                        ; OFF                                                                      ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                     ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                       ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                       ;
+; Entity Instance                       ; collision_detection:cd|dot_product_scale:vdxc|mult_real:y|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 96                                                                       ;
+;     -- LPM_WIDTHB                     ; 41                                                                       ;
+;     -- LPM_WIDTHP                     ; 137                                                                      ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                                                 ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                                       ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                                                      ;
+;     -- USE_EAB                        ; OFF                                                                      ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                     ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                       ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                       ;
+; Entity Instance                       ; collision_detection:cd|mult_real:vsqrmod|lpm_mult:Mult0                  ;
+;     -- LPM_WIDTHA                     ; 64                                                                       ;
+;     -- LPM_WIDTHB                     ; 64                                                                       ;
+;     -- LPM_WIDTHP                     ; 128                                                                      ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                                                   ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                                       ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                                                       ;
+;     -- USE_EAB                        ; OFF                                                                      ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                     ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                       ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                       ;
++---------------------------------------+--------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -889,10 +1297,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+--------+----------+------------------------+
 ; Port          ; Type   ; Severity ; Details                ;
 +---------------+--------+----------+------------------------+
-; tbest[27..16] ; Input  ; Info     ; Stuck at VCC           ;
-; tbest[30..28] ; Input  ; Info     ; Stuck at GND           ;
-; tbest[15..0]  ; Input  ; Info     ; Stuck at GND           ;
-; tbest[31]     ; Input  ; Info     ; Stuck at VCC           ;
+; tbest[59..32] ; Input  ; Info     ; Stuck at VCC           ;
+; tbest[62..60] ; Input  ; Info     ; Stuck at GND           ;
+; tbest[31..0]  ; Input  ; Info     ; Stuck at GND           ;
+; tbest[63]     ; Input  ; Info     ; Stuck at VCC           ;
 ; tnew          ; Output ; Info     ; Explicitly unconnected ;
 +---------------+--------+----------+------------------------+
 
@@ -904,11 +1312,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------+-------+----------+--------------+
 ; nextcol            ; Input ; Info     ; Stuck at VCC ;
 ; nextpos[2]         ; Input ; Info     ; Stuck at GND ;
-; nextpos[1][21..20] ; Input ; Info     ; Stuck at VCC ;
-; nextpos[1][31..25] ; Input ; Info     ; Stuck at GND ;
-; nextpos[1][23..22] ; Input ; Info     ; Stuck at GND ;
-; nextpos[1][19..0]  ; Input ; Info     ; Stuck at GND ;
-; nextpos[1][24]     ; Input ; Info     ; Stuck at VCC ;
+; nextpos[1][37..36] ; Input ; Info     ; Stuck at VCC ;
+; nextpos[1][63..41] ; Input ; Info     ; Stuck at GND ;
+; nextpos[1][39..38] ; Input ; Info     ; Stuck at GND ;
+; nextpos[1][35..0]  ; Input ; Info     ; Stuck at GND ;
+; nextpos[1][40]     ; Input ; Info     ; Stuck at VCC ;
 ; nextpos[0]         ; Input ; Info     ; Stuck at GND ;
 +--------------------+-------+----------+--------------+
 
@@ -919,22 +1327,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 34                          ;
-; cycloneiii_ff         ; 23                          ;
+; cycloneiii_ff         ; 93                          ;
+;     CLR               ; 21                          ;
+;     ENA               ; 7                           ;
+;     ENA SLD           ; 6                           ;
 ;     SCLR              ; 4                           ;
-;     plain             ; 19                          ;
-; cycloneiii_lcell_comb ; 61                          ;
-;     arith             ; 18                          ;
-;         2 data inputs ; 18                          ;
-;     normal            ; 43                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 10                          ;
-;         3 data inputs ; 6                           ;
-;         4 data inputs ; 24                          ;
+;     plain             ; 55                          ;
+; cycloneiii_lcell_comb ; 2329                        ;
+;     arith             ; 923                         ;
+;         2 data inputs ; 216                         ;
+;         3 data inputs ; 707                         ;
+;     normal            ; 1406                        ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 16                          ;
+;         2 data inputs ; 42                          ;
+;         3 data inputs ; 93                          ;
+;         4 data inputs ; 1253                        ;
+; cycloneiii_mac_mult   ; 34                          ;
+; cycloneiii_mac_out    ; 34                          ;
 ; cycloneiii_pll        ; 1                           ;
+; cycloneiii_ram_block  ; 912                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.30                        ;
-; Average LUT depth     ; 5.09                        ;
+; Max LUT depth         ; 13.10                       ;
+; Average LUT depth     ; 6.27                        ;
 +-----------------------+-----------------------------+
 
 
@@ -943,7 +1358,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:16     ;
 +----------------+--------------+
 
 
@@ -953,7 +1368,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Tue Apr 17 20:41:12 2018
+    Info: Processing started: Tue Apr 17 22:48:04 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final_project -c final_project_top
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 3 design units, including 3 entities, in source file lut.sv
@@ -971,14 +1386,13 @@ Info (12021): Found 1 design units, including 1 entities, in source file vga_con
     Info (12023): Found entity 1: VGA_controller
 Info (12021): Found 1 design units, including 1 entities, in source file final_top_level.sv
     Info (12023): Found entity 1: final_top_level
-Info (12021): Found 7 design units, including 7 entities, in source file vector.sv
+Info (12021): Found 6 design units, including 6 entities, in source file vector.sv
     Info (12023): Found entity 1: add_vector
     Info (12023): Found entity 2: sub_vector
     Info (12023): Found entity 3: mult_real
-    Info (12023): Found entity 4: div_real
-    Info (12023): Found entity 5: dot_product_scale
-    Info (12023): Found entity 6: normalize_vector
-    Info (12023): Found entity 7: sqrt_real
+    Info (12023): Found entity 4: dot_product_scale
+    Info (12023): Found entity 5: sqrt_real_32
+    Info (12023): Found entity 6: sqrt_real
 Info (12021): Found 1 design units, including 1 entities, in source file frame_buffer.sv
     Info (12023): Found entity 1: frame_buffer
 Info (12021): Found 1 design units, including 1 entities, in source file collision_detection.sv
@@ -991,33 +1405,21 @@ Info (12021): Found 1 design units, including 1 entities, in source file color_m
     Info (12023): Found entity 1: color_mapper
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/testbench.sv
     Info (12023): Found entity 1: testbench
-Warning (10236): Verilog HDL Implicit Net warning at final_top_level.sv(32): created implicit net for "WritePixel"
-Warning (10236): Verilog HDL Implicit Net warning at frame_buffer.sv(14): created implicit net for "Write_Index"
-Warning (10236): Verilog HDL Implicit Net warning at frame_buffer.sv(15): created implicit net for "Read_Index"
-Warning (10236): Verilog HDL Implicit Net warning at collision_detection.sv(21): created implicit net for "radsq"
 Info (12127): Elaborating entity "final_top_level" for the top level hierarchy
-Warning (10030): Net "WritePixel" at final_top_level.sv(32) has no driver or initial value, using a default initial value '0'
 Info (12128): Elaborating entity "sphere_reg" for hierarchy "sphere_reg:firstsph"
 Info (12128): Elaborating entity "color_mapper" for hierarchy "color_mapper:colmap"
 Info (12128): Elaborating entity "collision_detection" for hierarchy "collision_detection:cd"
-Warning (10230): Verilog HDL assignment warning at collision_detection.sv(21): truncated value with size 32 to match size of target (1)
 Info (12128): Elaborating entity "dot_product_scale" for hierarchy "collision_detection:cd|dot_product_scale:vdxc"
 Info (12128): Elaborating entity "mult_real" for hierarchy "collision_detection:cd|dot_product_scale:vdxc|mult_real:x"
 Info (12128): Elaborating entity "sqrt_real" for hierarchy "collision_detection:cd|sqrt_real:rbsqrt"
 Info (12128): Elaborating entity "VGA_controller" for hierarchy "VGA_controller:vga"
 Info (12128): Elaborating entity "frame_buffer" for hierarchy "frame_buffer:fb"
-Warning (10230): Verilog HDL assignment warning at frame_buffer.sv(14): truncated value with size 10 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at frame_buffer.sv(15): truncated value with size 10 to match size of target (1)
 Info (12128): Elaborating entity "increment_write" for hierarchy "increment_write:iw"
 Info (12128): Elaborating entity "y_ang_lut" for hierarchy "y_ang_lut:yang"
-Warning (10230): Verilog HDL assignment warning at ang_lut.sv(17): truncated value with size 32 to match size of target (16)
 Info (12128): Elaborating entity "x_ang_lut" for hierarchy "x_ang_lut:xang"
-Warning (10230): Verilog HDL assignment warning at ang_lut.sv(138): truncated value with size 32 to match size of target (16)
 Info (12128): Elaborating entity "ray_lut" for hierarchy "ray_lut:rl"
 Info (12128): Elaborating entity "sin_lut" for hierarchy "ray_lut:rl|sin_lut:s0"
-Warning (10230): Verilog HDL assignment warning at lut.sv(52): truncated value with size 32 to match size of target (15)
 Info (12128): Elaborating entity "cos_lut" for hierarchy "ray_lut:rl|cos_lut:c0"
-Warning (10230): Verilog HDL assignment warning at lut.sv(201): truncated value with size 32 to match size of target (15)
 Info (12128): Elaborating entity "vga_clk" for hierarchy "vga_clk:vga_clk_instance"
 Info (12128): Elaborating entity "altpll" for hierarchy "vga_clk:vga_clk_instance|altpll:altpll_component"
 Info (12130): Elaborated megafunction instantiation "vga_clk:vga_clk_instance|altpll:altpll_component"
@@ -1079,34 +1481,107 @@ Info (12133): Instantiated megafunction "vga_clk:vga_clk_instance|altpll:altpll_
 Info (12021): Found 1 design units, including 1 entities, in source file db/vga_clk_altpll1.v
     Info (12023): Found entity 1: vga_clk_altpll1
 Info (12128): Elaborating entity "vga_clk_altpll1" for hierarchy "vga_clk:vga_clk_instance|altpll:altpll_component|vga_clk_altpll1:auto_generated"
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "frame_buffer:fb|buffer_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 24
+        Info (286033): Parameter WIDTHAD_A set to 19
+        Info (286033): Parameter NUMWORDS_A set to 307200
+        Info (286033): Parameter WIDTH_B set to 24
+        Info (286033): Parameter WIDTHAD_B set to 19
+        Info (286033): Parameter NUMWORDS_B set to 307200
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+Info (278001): Inferred 3 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ray_lut:rl|mult_real:m0|Mult0"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "collision_detection:cd|dot_product_scale:vdxc|mult_real:y|Mult0"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "collision_detection:cd|mult_real:vsqrmod|Mult0"
+Info (12130): Elaborated megafunction instantiation "frame_buffer:fb|altsyncram:buffer_rtl_0"
+Info (12133): Instantiated megafunction "frame_buffer:fb|altsyncram:buffer_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "24"
+    Info (12134): Parameter "WIDTHAD_A" = "19"
+    Info (12134): Parameter "NUMWORDS_A" = "307200"
+    Info (12134): Parameter "WIDTH_B" = "24"
+    Info (12134): Parameter "WIDTHAD_B" = "19"
+    Info (12134): Parameter "NUMWORDS_B" = "307200"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_8ch1.tdf
+    Info (12023): Found entity 1: altsyncram_8ch1
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_hua.tdf
+    Info (12023): Found entity 1: decode_hua
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_fqb.tdf
+    Info (12023): Found entity 1: mux_fqb
+Info (12130): Elaborated megafunction instantiation "ray_lut:rl|mult_real:m0|lpm_mult:Mult0"
+Info (12133): Instantiated megafunction "ray_lut:rl|mult_real:m0|lpm_mult:Mult0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHA" = "34"
+    Info (12134): Parameter "LPM_WIDTHB" = "34"
+    Info (12134): Parameter "LPM_WIDTHP" = "68"
+    Info (12134): Parameter "LPM_WIDTHR" = "68"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_c6t.tdf
+    Info (12023): Found entity 1: mult_c6t
+Info (12130): Elaborated megafunction instantiation "collision_detection:cd|dot_product_scale:vdxc|mult_real:y|lpm_mult:Mult0"
+Info (12133): Instantiated megafunction "collision_detection:cd|dot_product_scale:vdxc|mult_real:y|lpm_mult:Mult0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHA" = "96"
+    Info (12134): Parameter "LPM_WIDTHB" = "41"
+    Info (12134): Parameter "LPM_WIDTHP" = "137"
+    Info (12134): Parameter "LPM_WIDTHR" = "137"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_mit.tdf
+    Info (12023): Found entity 1: mult_mit
+Info (12130): Elaborated megafunction instantiation "collision_detection:cd|mult_real:vsqrmod|lpm_mult:Mult0"
+Info (12133): Instantiated megafunction "collision_detection:cd|mult_real:vsqrmod|lpm_mult:Mult0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHA" = "64"
+    Info (12134): Parameter "LPM_WIDTHB" = "64"
+    Info (12134): Parameter "LPM_WIDTHP" = "128"
+    Info (12134): Parameter "LPM_WIDTHR" = "128"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_v7t.tdf
+    Info (12023): Found entity 1: mult_v7t
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following DSP element node(s):
+        Warning (14320): Synthesized away node "collision_detection:cd|dot_product_scale:vdxc|mult_real:y|lpm_mult:Mult0|mult_mit:auto_generated|mac_mult35"
+        Warning (14320): Synthesized away node "collision_detection:cd|dot_product_scale:vdxc|mult_real:y|lpm_mult:Mult0|mult_mit:auto_generated|mac_out36"
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following DSP element node(s):
+        Warning (14320): Synthesized away node "collision_detection:cd|mult_real:vsqrmod|lpm_mult:Mult0|mult_v7t:auto_generated|mac_mult31"
+        Warning (14320): Synthesized away node "collision_detection:cd|mult_real:vsqrmod|lpm_mult:Mult0|mult_v7t:auto_generated|mac_out32"
+        Warning (14320): Synthesized away node "collision_detection:cd|dot_product_scale:vdxc|mult_real:y|lpm_mult:Mult0|mult_mit:auto_generated|mac_mult29"
+        Warning (14320): Synthesized away node "collision_detection:cd|dot_product_scale:vdxc|mult_real:y|lpm_mult:Mult0|mult_mit:auto_generated|mac_mult33"
+        Warning (14320): Synthesized away node "collision_detection:cd|dot_product_scale:vdxc|mult_real:y|lpm_mult:Mult0|mult_mit:auto_generated|mac_out30"
+        Warning (14320): Synthesized away node "collision_detection:cd|dot_product_scale:vdxc|mult_real:y|lpm_mult:Mult0|mult_mit:auto_generated|mac_out34"
+Info (13014): Ignored 2205 buffer(s)
+    Info (13019): Ignored 2205 SOFT buffer(s)
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "VGA_R[0]" is stuck at GND
-    Warning (13410): Pin "VGA_R[1]" is stuck at GND
-    Warning (13410): Pin "VGA_R[2]" is stuck at GND
-    Warning (13410): Pin "VGA_R[3]" is stuck at GND
-    Warning (13410): Pin "VGA_R[4]" is stuck at GND
-    Warning (13410): Pin "VGA_R[5]" is stuck at GND
-    Warning (13410): Pin "VGA_R[6]" is stuck at GND
-    Warning (13410): Pin "VGA_R[7]" is stuck at GND
-    Warning (13410): Pin "VGA_G[0]" is stuck at GND
-    Warning (13410): Pin "VGA_G[1]" is stuck at GND
-    Warning (13410): Pin "VGA_G[2]" is stuck at GND
-    Warning (13410): Pin "VGA_G[3]" is stuck at GND
-    Warning (13410): Pin "VGA_G[4]" is stuck at GND
-    Warning (13410): Pin "VGA_G[5]" is stuck at GND
-    Warning (13410): Pin "VGA_G[6]" is stuck at GND
-    Warning (13410): Pin "VGA_G[7]" is stuck at GND
-    Warning (13410): Pin "VGA_B[0]" is stuck at GND
-    Warning (13410): Pin "VGA_B[1]" is stuck at GND
-    Warning (13410): Pin "VGA_B[2]" is stuck at GND
-    Warning (13410): Pin "VGA_B[3]" is stuck at GND
-    Warning (13410): Pin "VGA_B[4]" is stuck at GND
-    Warning (13410): Pin "VGA_B[5]" is stuck at GND
-    Warning (13410): Pin "VGA_B[6]" is stuck at GND
-    Warning (13410): Pin "VGA_B[7]" is stuck at GND
     Warning (13410): Pin "VGA_SYNC_N" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 225 registers lost all their fanouts during netlist optimizations.
+Info (17049): 39 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file D:/ece_385/final_project/output_files/final_project_top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
@@ -1114,16 +1589,18 @@ Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "KEY[3]"
-Info (21057): Implemented 95 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3364 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 60 logic cells
+    Info (21061): Implemented 2349 logic cells
+    Info (21064): Implemented 912 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 43 warnings
-    Info: Peak virtual memory: 1919 megabytes
-    Info: Processing ended: Tue Apr 17 20:41:29 2018
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:25
+    Info (21062): Implemented 68 DSP elements
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 1932 megabytes
+    Info: Processing ended: Tue Apr 17 22:48:35 2018
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:00:39
 
 
 +------------------------------------------+
