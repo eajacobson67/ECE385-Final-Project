@@ -1,1 +1,5 @@
 v1
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,collision_detection:cd|mult_real:vsqrmod|lpm_mult:Mult0|mult_v7t:auto_generated|mac_mult25,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,collision_detection:cd|mult_real:vsqrmod|lpm_mult:Mult0|mult_v7t:auto_generated|mac_mult27,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,collision_detection:cd|mult_real:vsqrmod|lpm_mult:Mult0|mult_v7t:auto_generated|mac_mult29,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,ray_lut:rl|mult_real:m0|lpm_mult:Mult0|mult_c6t:auto_generated|mac_mult3,

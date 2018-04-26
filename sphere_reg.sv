@@ -2,16 +2,15 @@ typedef logic [2:0] [63:0] vector;
 typedef logic [63:0] fixed_real;
 typedef logic [2:0] [7:0] color;
 
-
 module sphere_reg (
-	input logic frame_clk,
+	input logic Frame_Clk,
 	input color nextcol,
 	input vector nextpos,
 	output vector currentpos,
 	output color currentcol
 );
 
-always_ff @ (posedge frame_clk) begin
+always_ff @ (posedge Frame_Clk) begin
 	currentpos <= nextpos;
 	currentcol <= nextcol;
 end
@@ -20,7 +19,7 @@ endmodule
 
 
 module sphere_reg_4 (
-	input logic Clk, frame_clk, Reset,
+	input logic Clk, Frame_Clk, Reset,
 	input logic Hit,
 	input logic [1:0] Hit_index, Read_index,
 	output vector Sphere_pos,
@@ -54,7 +53,7 @@ add_vector pva3(.a(pos[3]),.b(velacc[3]),.c(posvelacc[3]));
 
 rand_lut rl(.*);
 
-always_ff @ (posedge frame_clk) begin
+always_ff @ (posedge Frame_Clk) begin
 	pos <= pos_n;
 	vel <= vel_n;
 end

@@ -1,6 +1,6 @@
+typedef logic [2:0] [63:0] vector;
 typedef logic [63:0] fixed_real;
-typedef logic [2:0][63:0] vector;
-typedef logic [2:0][7:0] color;
+typedef logic [2:0] [7:0] color;
 
 /*
 32-bit fixed_real is a it's signed value times 2^(-16)

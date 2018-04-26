@@ -1,5 +1,5 @@
 Analysis & Synthesis report for final_project_top
-Wed Apr 25 21:34:32 2018
+Wed Apr 25 22:19:00 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -21,7 +21,7 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
  13. General Register Statistics
  14. Registers Packed Into Inferred Megafunctions
  15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_8ch1:auto_generated
+ 16. Source assignments for frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_89h1:auto_generated
  17. Parameter Settings for User Entity Instance: VGA_controller:vga
  18. Parameter Settings for User Entity Instance: increment_write:iw
  19. Parameter Settings for User Entity Instance: vga_clk:vga_clk_instance|altpll:altpll_component
@@ -66,18 +66,18 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 25 21:34:32 2018      ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 25 22:19:00 2018      ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                      ; final_project_top                          ;
 ; Top-level Entity Name              ; final_top_level                            ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 2,329                                      ;
-;     Total combinational functions  ; 2,328                                      ;
+; Total logic elements               ; 1,777                                      ;
+;     Total combinational functions  ; 1,776                                      ;
 ;     Dedicated logic registers      ; 93                                         ;
 ; Total registers                    ; 93                                         ;
 ; Total pins                         ; 34                                         ;
 ; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 7,372,800                                  ;
+; Total memory bits                  ; 1,843,200                                  ;
 ; Embedded Multiplier 9-bit elements ; 68                                         ;
 ; Total PLLs                         ; 1                                          ;
 +------------------------------------+--------------------------------------------+
@@ -212,9 +212,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; altrom.inc                       ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; altram.inc                       ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_8ch1.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/ECE_385/final_project/db/altsyncram_8ch1.tdf                      ;         ;
+; db/altsyncram_89h1.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/ECE_385/final_project/db/altsyncram_89h1.tdf                      ;         ;
 ; db/decode_hua.tdf                ; yes             ; Auto-Generated Megafunction  ; D:/ECE_385/final_project/db/decode_hua.tdf                           ;         ;
-; db/mux_fqb.tdf                   ; yes             ; Auto-Generated Megafunction  ; D:/ECE_385/final_project/db/mux_fqb.tdf                              ;         ;
+; db/mux_vob.tdf                   ; yes             ; Auto-Generated Megafunction  ; D:/ECE_385/final_project/db/mux_vob.tdf                              ;         ;
 ; lpm_mult.tdf                     ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/lpm_mult.tdf          ;         ;
 ; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/lpm_add_sub.inc       ;         ;
 ; multcore.inc                     ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/multcore.inc          ;         ;
@@ -231,16 +231,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 2,329          ;
+; Estimated Total logic elements              ; 1,777          ;
 ;                                             ;                ;
-; Total combinational functions               ; 2328           ;
+; Total combinational functions               ; 1776           ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 1253           ;
-;     -- 3 input functions                    ; 800            ;
-;     -- <=2 input functions                  ; 275            ;
+;     -- 4 input functions                    ; 700            ;
+;     -- 3 input functions                    ; 806            ;
+;     -- <=2 input functions                  ; 270            ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 1405           ;
+;     -- normal mode                          ; 853            ;
 ;     -- arithmetic mode                      ; 923            ;
 ;                                             ;                ;
 ; Total registers                             ; 93             ;
@@ -248,7 +248,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 34             ;
-; Total memory bits                           ; 7372800        ;
+; Total memory bits                           ; 1843200        ;
 ;                                             ;                ;
 ; Embedded Multiplier 9-bit elements          ; 68             ;
 ;                                             ;                ;
@@ -256,9 +256,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- PLLs                                 ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 963            ;
-; Total fan-out                               ; 34989          ;
-; Average fan-out                             ; 10.08          ;
+; Maximum fan-out                             ; 279            ;
+; Total fan-out                               ; 13195          ;
+; Average fan-out                             ; 5.91           ;
 +---------------------------------------------+----------------+
 
 
@@ -267,7 +267,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                               ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+--------------+
-; |final_top_level                          ; 2328 (1)          ; 93 (2)       ; 7372800     ; 68           ; 0       ; 34        ; 34   ; 0            ; |final_top_level                                                                                                  ; work         ;
+; |final_top_level                          ; 1776 (1)          ; 93 (2)       ; 1843200     ; 68           ; 0       ; 34        ; 34   ; 0            ; |final_top_level                                                                                                  ; work         ;
 ;    |VGA_controller:vga|                   ; 60 (60)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|VGA_controller:vga                                                                               ; work         ;
 ;    |collision_detection:cd|               ; 748 (70)          ; 0 (0)        ; 0           ; 60           ; 0       ; 30        ; 0    ; 0            ; |final_top_level|collision_detection:cd                                                                           ; work         ;
 ;       |dot_product_scale:vdxc|            ; 318 (0)           ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|collision_detection:cd|dot_product_scale:vdxc                                                    ; work         ;
@@ -277,23 +277,23 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |mult_real:vsqrmod|                 ; 360 (0)           ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|collision_detection:cd|mult_real:vsqrmod                                                         ; work         ;
 ;          |lpm_mult:Mult0|                 ; 360 (0)           ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|collision_detection:cd|mult_real:vsqrmod|lpm_mult:Mult0                                          ; work         ;
 ;             |mult_v7t:auto_generated|     ; 360 (360)         ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|collision_detection:cd|mult_real:vsqrmod|lpm_mult:Mult0|mult_v7t:auto_generated                  ; work         ;
-;    |frame_buffer:fb|                      ; 838 (44)          ; 6 (0)        ; 7372800     ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb                                                                                  ; work         ;
-;       |altsyncram:buffer_rtl_0|           ; 794 (0)           ; 6 (0)        ; 7372800     ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0                                                          ; work         ;
-;          |altsyncram_8ch1:auto_generated| ; 794 (0)           ; 6 (6)        ; 7372800     ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_8ch1:auto_generated                           ; work         ;
-;             |decode_hua:decode2|          ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_8ch1:auto_generated|decode_hua:decode2        ; work         ;
-;             |mux_fqb:mux3|                ; 747 (747)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_8ch1:auto_generated|mux_fqb:mux3              ; work         ;
-;    |increment_write:iw|                   ; 42 (42)           ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|increment_write:iw                                                                               ; work         ;
-;    |ray_lut:rl|                           ; 430 (0)           ; 30 (0)       ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl                                                                                       ; work         ;
+;    |frame_buffer:fb|                      ; 280 (44)          ; 6 (0)        ; 1843200     ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb                                                                                  ; work         ;
+;       |altsyncram:buffer_rtl_0|           ; 236 (0)           ; 6 (0)        ; 1843200     ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0                                                          ; work         ;
+;          |altsyncram_89h1:auto_generated| ; 236 (0)           ; 6 (6)        ; 1843200     ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_89h1:auto_generated                           ; work         ;
+;             |decode_hua:decode2|          ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_89h1:auto_generated|decode_hua:decode2        ; work         ;
+;             |mux_vob:mux3|                ; 189 (189)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_89h1:auto_generated|mux_vob:mux3              ; work         ;
+;    |increment_write:iw|                   ; 44 (44)           ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|increment_write:iw                                                                               ; work         ;
+;    |ray_lut:rl|                           ; 434 (0)           ; 30 (0)       ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl                                                                                       ; work         ;
 ;       |mult_real:m0|                      ; 100 (0)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m0                                                                          ; work         ;
 ;          |lpm_mult:Mult0|                 ; 100 (0)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m0|lpm_mult:Mult0                                                           ; work         ;
 ;             |mult_c6t:auto_generated|     ; 100 (100)         ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m0|lpm_mult:Mult0|mult_c6t:auto_generated                                   ; work         ;
-;       |sin_lut:s0|                        ; 161 (161)         ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s0                                                                            ; work         ;
+;       |sin_lut:s0|                        ; 165 (165)         ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s0                                                                            ; work         ;
 ;       |sin_lut:s1|                        ; 169 (169)         ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s1                                                                            ; work         ;
 ;    |vga_clk:vga_clk_instance|             ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|vga_clk:vga_clk_instance                                                                         ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|vga_clk:vga_clk_instance|altpll:altpll_component                                                 ; work         ;
 ;          |vga_clk_altpll1:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|vga_clk:vga_clk_instance|altpll:altpll_component|vga_clk_altpll1:auto_generated                  ; work         ;
-;    |x_ang_lut:xang|                       ; 109 (109)         ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|x_ang_lut:xang                                                                                   ; work         ;
-;    |y_ang_lut:yang|                       ; 100 (100)         ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|y_ang_lut:yang                                                                                   ; work         ;
+;    |x_ang_lut:xang|                       ; 108 (108)         ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|x_ang_lut:xang                                                                                   ; work         ;
+;    |y_ang_lut:yang|                       ; 101 (101)         ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|y_ang_lut:yang                                                                                   ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -303,7 +303,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
 ; Name                                                                              ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF  ;
 +-----------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
-; frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_8ch1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 307200       ; 24           ; 307200       ; 24           ; 7372800 ; None ;
+; frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_89h1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 307200       ; 6            ; 307200       ; 6            ; 1843200 ; None ;
 +-----------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
 
 
@@ -343,28 +343,10 @@ Encoding Type:  One-Hot
 +-----------------------------------------+----------------------------------------+
 ; x_ang_lut:xang|out[6..15]               ; Stuck at GND due to stuck port data_in ;
 ; y_ang_lut:yang|out[6..15]               ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[0][0]    ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[0][1]    ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[0][2]    ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[0][3]    ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[0][4]    ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[0][5]    ; Stuck at VCC due to stuck port data_in ;
 ; sphere_reg:firstsph|currentcol[0][6]    ; Stuck at VCC due to stuck port data_in ;
 ; sphere_reg:firstsph|currentcol[0][7]    ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[1][0]    ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[1][1]    ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[1][2]    ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[1][3]    ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[1][4]    ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[1][5]    ; Stuck at VCC due to stuck port data_in ;
 ; sphere_reg:firstsph|currentcol[1][6]    ; Stuck at VCC due to stuck port data_in ;
 ; sphere_reg:firstsph|currentcol[1][7]    ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[2][0]    ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[2][1]    ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[2][2]    ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[2][3]    ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[2][4]    ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[2][5]    ; Stuck at VCC due to stuck port data_in ;
 ; sphere_reg:firstsph|currentcol[2][6]    ; Stuck at VCC due to stuck port data_in ;
 ; sphere_reg:firstsph|currentcol[2][7]    ; Stuck at VCC due to stuck port data_in ;
 ; sphere_reg:firstsph|currentpos[0][0]    ; Stuck at GND due to stuck port data_in ;
@@ -570,7 +552,7 @@ Encoding Type:  One-Hot
 ; State~9                                 ; Lost fanout                            ;
 ; State~10                                ; Lost fanout                            ;
 ; State~11                                ; Lost fanout                            ;
-; Total Number of Removed Registers = 277 ;                                        ;
+; Total Number of Removed Registers = 259 ;                                        ;
 +-----------------------------------------+----------------------------------------+
 
 
@@ -603,13 +585,13 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------+
-; Registers Packed Into Inferred Megafunctions                                ;
-+---------------------------------------+------------------------------+------+
-; Register Name                         ; Megafunction                 ; Type ;
-+---------------------------------------+------------------------------+------+
-; frame_buffer:fb|ReadColor[0..2][0..7] ; frame_buffer:fb|buffer_rtl_0 ; RAM  ;
-+---------------------------------------+------------------------------+------+
++--------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                   ;
++------------------------------------------+------------------------------+------+
+; Register Name                            ; Megafunction                 ; Type ;
++------------------------------------------+------------------------------+------+
+; frame_buffer:fb|ReadColor_raw[0..2][0,1] ; frame_buffer:fb|buffer_rtl_0 ; RAM  ;
++------------------------------------------+------------------------------+------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -626,7 +608,7 @@ Encoding Type:  One-Hot
 
 
 +-----------------------------------------------------------------------------------------------+
-; Source assignments for frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_8ch1:auto_generated ;
+; Source assignments for frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_89h1:auto_generated ;
 +---------------------------------+--------------------+------+---------------------------------+
 ; Assignment                      ; Value              ; From ; To                              ;
 +---------------------------------+--------------------+------+---------------------------------+
@@ -1042,7 +1024,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE               ;
 ; WIDTH_BYTEENA                      ; 1                    ; Untyped                      ;
 ; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                      ;
-; WIDTH_A                            ; 24                   ; Untyped                      ;
+; WIDTH_A                            ; 6                    ; Untyped                      ;
 ; WIDTHAD_A                          ; 19                   ; Untyped                      ;
 ; NUMWORDS_A                         ; 307200               ; Untyped                      ;
 ; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                      ;
@@ -1051,7 +1033,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                      ;
 ; INDATA_ACLR_A                      ; NONE                 ; Untyped                      ;
 ; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                      ;
-; WIDTH_B                            ; 24                   ; Untyped                      ;
+; WIDTH_B                            ; 6                    ; Untyped                      ;
 ; WIDTHAD_B                          ; 19                   ; Untyped                      ;
 ; NUMWORDS_B                         ; 307200               ; Untyped                      ;
 ; INDATA_REG_B                       ; CLOCK1               ; Untyped                      ;
@@ -1086,7 +1068,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                      ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                      ;
 ; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                      ;
-; CBXI_PARAMETER                     ; altsyncram_8ch1      ; Untyped                      ;
+; CBXI_PARAMETER                     ; altsyncram_89h1      ; Untyped                      ;
 +------------------------------------+----------------------+------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1221,10 +1203,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Number of entity instances                ; 1                                       ;
 ; Entity Instance                           ; frame_buffer:fb|altsyncram:buffer_rtl_0 ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                               ;
-;     -- WIDTH_A                            ; 24                                      ;
+;     -- WIDTH_A                            ; 6                                       ;
 ;     -- NUMWORDS_A                         ; 307200                                  ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                            ;
-;     -- WIDTH_B                            ; 24                                      ;
+;     -- WIDTH_B                            ; 6                                       ;
 ;     -- NUMWORDS_B                         ; 307200                                  ;
 ;     -- ADDRESS_REG_B                      ; CLOCK0                                  ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                            ;
@@ -1334,23 +1316,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SLD           ; 6                           ;
 ;     SCLR              ; 4                           ;
 ;     plain             ; 55                          ;
-; cycloneiii_lcell_comb ; 2329                        ;
+; cycloneiii_lcell_comb ; 1777                        ;
 ;     arith             ; 923                         ;
 ;         2 data inputs ; 216                         ;
 ;         3 data inputs ; 707                         ;
-;     normal            ; 1406                        ;
+;     normal            ; 854                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 16                          ;
-;         2 data inputs ; 42                          ;
-;         3 data inputs ; 93                          ;
-;         4 data inputs ; 1253                        ;
+;         2 data inputs ; 37                          ;
+;         3 data inputs ; 99                          ;
+;         4 data inputs ; 700                         ;
 ; cycloneiii_mac_mult   ; 34                          ;
 ; cycloneiii_mac_out    ; 34                          ;
 ; cycloneiii_pll        ; 1                           ;
-; cycloneiii_ram_block  ; 912                         ;
+; cycloneiii_ram_block  ; 228                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 13.10                       ;
-; Average LUT depth     ; 6.27                        ;
+; Max LUT depth         ; 13.30                       ;
+; Average LUT depth     ; 6.66                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1359,7 +1341,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:18     ;
+; Top            ; 00:00:16     ;
 +----------------+--------------+
 
 
@@ -1369,7 +1351,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Wed Apr 25 21:33:56 2018
+    Info: Processing started: Wed Apr 25 22:18:31 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final_project -c final_project_top
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 3 design units, including 3 entities, in source file lut.sv
@@ -1394,8 +1376,10 @@ Info (12021): Found 6 design units, including 6 entities, in source file vector.
     Info (12023): Found entity 4: dot_product_scale
     Info (12023): Found entity 5: sqrt_real_32
     Info (12023): Found entity 6: sqrt_real
-Info (12021): Found 1 design units, including 1 entities, in source file frame_buffer.sv
+Info (12021): Found 3 design units, including 3 entities, in source file frame_buffer.sv
     Info (12023): Found entity 1: frame_buffer
+    Info (12023): Found entity 2: color_shrink
+    Info (12023): Found entity 3: color_expand
 Info (12021): Found 1 design units, including 1 entities, in source file collision_detection.sv
     Info (12023): Found entity 1: collision_detection
 Info (12021): Found 2 design units, including 2 entities, in source file sphere_reg.sv
@@ -1435,6 +1419,11 @@ Info (12128): Elaborating entity "mult_real" for hierarchy "collision_detection:
 Info (12128): Elaborating entity "sqrt_real" for hierarchy "collision_detection:cd|sqrt_real:rbsqrt"
 Info (12128): Elaborating entity "VGA_controller" for hierarchy "VGA_controller:vga"
 Info (12128): Elaborating entity "frame_buffer" for hierarchy "frame_buffer:fb"
+Info (12128): Elaborating entity "color_shrink" for hierarchy "frame_buffer:fb|color_shrink:shrink"
+Warning (10230): Verilog HDL assignment warning at frame_buffer.sv(39): truncated value with size 12 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at frame_buffer.sv(40): truncated value with size 12 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at frame_buffer.sv(41): truncated value with size 12 to match size of target (2)
+Info (12128): Elaborating entity "color_expand" for hierarchy "frame_buffer:fb|color_expand:expand"
 Info (12128): Elaborating entity "increment_write" for hierarchy "increment_write:iw"
 Info (12128): Elaborating entity "y_ang_lut" for hierarchy "y_ang_lut:yang"
 Info (12128): Elaborating entity "x_ang_lut" for hierarchy "x_ang_lut:xang"
@@ -1505,10 +1494,10 @@ Info (12128): Elaborating entity "vga_clk_altpll1" for hierarchy "vga_clk:vga_cl
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "frame_buffer:fb|buffer_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
-        Info (286033): Parameter WIDTH_A set to 24
+        Info (286033): Parameter WIDTH_A set to 6
         Info (286033): Parameter WIDTHAD_A set to 19
         Info (286033): Parameter NUMWORDS_A set to 307200
-        Info (286033): Parameter WIDTH_B set to 24
+        Info (286033): Parameter WIDTH_B set to 6
         Info (286033): Parameter WIDTHAD_B set to 19
         Info (286033): Parameter NUMWORDS_B set to 307200
         Info (286033): Parameter ADDRESS_ACLR_A set to NONE
@@ -1526,10 +1515,10 @@ Info (278001): Inferred 3 megafunctions from design logic
 Info (12130): Elaborated megafunction instantiation "frame_buffer:fb|altsyncram:buffer_rtl_0"
 Info (12133): Instantiated megafunction "frame_buffer:fb|altsyncram:buffer_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
-    Info (12134): Parameter "WIDTH_A" = "24"
+    Info (12134): Parameter "WIDTH_A" = "6"
     Info (12134): Parameter "WIDTHAD_A" = "19"
     Info (12134): Parameter "NUMWORDS_A" = "307200"
-    Info (12134): Parameter "WIDTH_B" = "24"
+    Info (12134): Parameter "WIDTH_B" = "6"
     Info (12134): Parameter "WIDTHAD_B" = "19"
     Info (12134): Parameter "NUMWORDS_B" = "307200"
     Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
@@ -1540,12 +1529,12 @@ Info (12133): Instantiated megafunction "frame_buffer:fb|altsyncram:buffer_rtl_0
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_8ch1.tdf
-    Info (12023): Found entity 1: altsyncram_8ch1
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_89h1.tdf
+    Info (12023): Found entity 1: altsyncram_89h1
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_hua.tdf
     Info (12023): Found entity 1: decode_hua
-Info (12021): Found 1 design units, including 1 entities, in source file db/mux_fqb.tdf
-    Info (12023): Found entity 1: mux_fqb
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_vob.tdf
+    Info (12023): Found entity 1: mux_vob
 Info (12130): Elaborated megafunction instantiation "ray_lut:rl|mult_real:m0|lpm_mult:Mult0"
 Info (12133): Instantiated megafunction "ray_lut:rl|mult_real:m0|lpm_mult:Mult0" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHA" = "34"
@@ -1600,6 +1589,24 @@ Warning (14284): Synthesized away the following node(s):
 Info (13014): Ignored 2205 buffer(s)
     Info (13019): Ignored 2205 SOFT buffer(s)
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND
+    Warning (13410): Pin "VGA_R[3]" is stuck at GND
+    Warning (13410): Pin "VGA_R[4]" is stuck at GND
+    Warning (13410): Pin "VGA_R[5]" is stuck at GND
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND
+    Warning (13410): Pin "VGA_G[3]" is stuck at GND
+    Warning (13410): Pin "VGA_G[4]" is stuck at GND
+    Warning (13410): Pin "VGA_G[5]" is stuck at GND
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND
+    Warning (13410): Pin "VGA_B[3]" is stuck at GND
+    Warning (13410): Pin "VGA_B[4]" is stuck at GND
+    Warning (13410): Pin "VGA_B[5]" is stuck at GND
     Warning (13410): Pin "VGA_SYNC_N" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 39 registers lost all their fanouts during netlist optimizations.
@@ -1610,18 +1617,18 @@ Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "KEY[3]"
-Info (21057): Implemented 3364 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2128 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 2349 logic cells
-    Info (21064): Implemented 912 RAM segments
+    Info (21061): Implemented 1797 logic cells
+    Info (21064): Implemented 228 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 68 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 832 megabytes
-    Info: Processing ended: Wed Apr 25 21:34:32 2018
-    Info: Elapsed time: 00:00:36
-    Info: Total CPU time (on all processors): 00:00:43
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 40 warnings
+    Info: Peak virtual memory: 1079 megabytes
+    Info: Processing ended: Wed Apr 25 22:19:00 2018
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:00:42
 
 
 +------------------------------------------+

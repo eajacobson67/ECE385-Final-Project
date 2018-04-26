@@ -20,7 +20,7 @@ logic [9:0] DrawX, DrawY, WriteX, WriteY;
 
 fixed_real dPhi, dTheta;
 
-sphere_reg firstsph(.frame_clk(VGA_VS), .nextcol({{8{8'hff}}, {8{8'hff}}, {8{8'hff}}}), .nextpos({64'd0, 64'd304 << 32, 64'd0}),
+sphere_reg firstsph(.Frame_Clk(VGA_VS), .nextcol({8'hff, 8'hff, 8'hff}), .nextpos({64'd0, 64'd304 << 32, 64'd0}),
 	.currentpos(sphere1pos), .currentcol(sphere1col));
 	
 color_mapper colmap(.is_ball(collide), .DrawX(WriteX), .DrawY(WriteY), .colin(sphere1col), .col(colorout));
