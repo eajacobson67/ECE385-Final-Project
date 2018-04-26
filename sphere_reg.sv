@@ -37,7 +37,10 @@ vector pos_n [1:0];
 vector vel_n [1:0];
 fixed_real random;
 
-assign acc = {4{64'hFFFFFFFE00000000,64'd0,64'd0}};
+assign acc[0] = {64'hFFFFFFFE00000000,64'd0,64'd0};
+assign acc[1] = {64'hFFFFFFFE00000000,64'd0,64'd0};
+assign acc[2] = {64'hFFFFFFFE00000000,64'd0,64'd0};
+assign acc[3] = {64'hFFFFFFFE00000000,64'd0,64'd0};
 
 add_vector va0(.a(vel[0]),.b(acc[0]),.c(velacc[0]));
 add_vector va1(.a(vel[1]),.b(acc[1]),.c(velacc[1]));
